@@ -12,12 +12,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         @vite('resources/css/app.css')
         @vite(['resources/js/app.js'])
-
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
     <section class="">
         
         <x-navbar></x-navbar>
 
         <x-transaction></x-transaction>
+
+        <div class="max-w-screen-xl mx-8 my-8 rounded-2xl grid grid-cols-2 gap-4">
+            <x-chart></x-chart>
+        </div>
+
     </section>
 </html>

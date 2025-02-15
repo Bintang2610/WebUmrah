@@ -15,9 +15,9 @@
         </div>
     </div>
 
-    <div class="relative overflow-x-auto mt-6 mb-2 sm:rounded-lg">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+    <div class="relative overflow-x-auto mt-4 mb-2 sm:rounded-lg">
+        <table class="w-full text-md font-semibold text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-md text-gray-700 dark:text-gray-400">
                 <tr class=" border-b">
                     <th scope="col" class="px-6 py-3"></th>
                     <th scope="col" class="px-6 py-3">
