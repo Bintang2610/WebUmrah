@@ -1,4 +1,4 @@
-<div class="max-w-screen-xl mx-8 my-8 px-6 py-10 bg-[#5CC1F3] text-white rounded-2xl">
+<div class="w-dvh mx-8 my-8 px-6 py-10 bg-[#5CC1F3] text-white rounded-2xl">
 <!-- bg-gradient-to-r from-[#a0c6ed] via-[#2980d7] to-[#7db6ee] -->
 
 <!-- Navbar -->
