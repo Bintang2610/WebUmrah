@@ -41,7 +41,7 @@
 
     <!-- 4 Kolom Menyamping -->
     <div class="grid grid-cols-4 gap-4 px-2 mt-4 py- bg">
-        <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
+        <div class="bg-white bg-opacity-50 hover:bg-opacity-25 text-gray-800 p-6 rounded-xl">
             <p class="pb-2 text-lg">Wisata Luar Negeri</p>
             <p class="text-4xl font-semibold">67</p>
         </div>
