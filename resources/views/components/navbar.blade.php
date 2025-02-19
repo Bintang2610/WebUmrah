@@ -1,11 +1,15 @@
-<div class="max-w-screen-xl mx-8 my-8 px-6 py-10 bg-gradient-to-r from-[#a0c6ed] via-[#2980d7] to-[#7db6ee] text-white rounded-2xl">
-    <!-- Navbar -->
+<div class="max-w-screen-xl mx-8 my-8 px-6 py-10 bg-[#5CC1F3] text-white rounded-2xl">
+<!-- bg-gradient-to-r from-[#a0c6ed] via-[#2980d7] to-[#7db6ee] -->    
+
+<!-- Navbar -->
+
     <div class="flex items-center justify-between">
         <!-- Nama di Kiri -->
-        <div class="text-sm font-bold pl-2">
-        <i class="fa-regular fa-heart"></i>
-        Elkhadijah
-        </div>
+        <div class="text-sm font-bold flex items-center space-x-1">
+    <img src="{{ asset('/images/logo.png') }}" alt="Foto" class="h-3">
+    <span>Elkhadijah</span>
+</div>
+
 
         <!-- Menu Navbar di Tengah -->
         <div class="flex space-x-6">
