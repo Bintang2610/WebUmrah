@@ -17,16 +17,17 @@
 
     <div class="flex justify-between items-center bg-white p-0 rounded-lg">
     <!-- Search Input -->
-    <div class="relative w-fit bg-gray-100 py-4 px-6 rounded-tl-xl">
+    <div class="relative w-fit bg-gray-100 py-4 px-6 rounded-tl-xl rounded-tr-xl">
     <!-- Input -->
     <input type="text" placeholder="Cari data..." 
-        class="px-4 py-4 w-[440px] h-[43px] border text-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+        class="px-4 py-4 w-[840px] h-[43px] border text-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
 
     <!-- Segitiga Siku-Siku -->
-    <div class="absolute top-1/2 -translate-y-1/2 right-[-200px] 
-                w-0 h-0 border-t-[76px] border-t-transparent 
-                border-l-[200px] border-l-gray-100 border-b-[0px]"></div>
-</div>
+<!--     <div class="absolute top-1/2 -translate-y-1/2 right-[-200px] 
+                    w-0 h-0 border-t-[76px] border-t-transparent 
+                    border-l-[200px] border-l-gray-100 border-b-[0px]"></div>
+    </div> -->
+    </div>
 
 
     <!-- Button Group -->
