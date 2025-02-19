@@ -6,9 +6,9 @@
     <div class="flex items-center justify-between">
         <!-- Nama di Kiri -->
         <div class="text-sm font-bold flex items-center space-x-1">
-    <img src="{{ asset('/images/logo.png') }}" alt="Foto" class="h-3">
-    <span>Elkhadijah</span>
-</div>
+            <img src="{{ asset('/images/logo.png') }}" alt="Foto" class="h-3">
+            <span>Elkhadijah</span>
+        </div>
 
 
         <!-- Menu Navbar di Tengah -->
@@ -41,10 +41,12 @@
 
     <!-- 4 Kolom Menyamping -->
     <div class="grid grid-cols-4 gap-4 px-2 mt-4 py- bg">
-        <div class="bg-white bg-opacity-50 hover:bg-opacity-25 text-gray-800 p-6 rounded-xl">
+        <a href="">
+        <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
             <p class="pb-2 text-lg">Wisata Luar Negeri</p>
             <p class="text-4xl font-semibold">67</p>
         </div>
+        </a>
         <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
             <p class="pb-2 text-lg">Wisata Domestrik</p>
             <p class="text-4xl font-semibold">39</p>

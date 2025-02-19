@@ -17,23 +17,28 @@
 
     <div class="flex justify-between items-center bg-white p-0 rounded-lg">
     <!-- Search Input -->
-    <div class="relative w-fit bg-gray-100 py-4 px-6 rounded-tl-xl rounded-tr-xl">
-    <!-- Input -->
-    <input type="text" placeholder="Cari data..." 
-        class="px-4 py-4 w-[840px] h-[43px] border text-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <div class="flex items-center flex-grow">
+        <!-- Input Background -->
+        <div class="bg-gray-100 py-4 pl-6 pr-11 rounded-tl-3xl flex items-center flex-grow"
+            style="border-top-right-radius: 70px 40px;">
+            <!-- Input -->
+            <input type="text" placeholder="Cari data..."
+                class="px-4 py-4 w-full h-[43px] border text-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-    <!-- Segitiga Siku-Siku -->
-<!--     <div class="absolute top-1/2 -translate-y-1/2 right-[-200px] 
-                    w-0 h-0 border-t-[76px] border-t-transparent 
-                    border-l-[200px] border-l-gray-100 border-b-[0px]"></div>
-    </div> -->
+        <!-- Kotak di Sebelah Kanan Input -->
+        <div class="relative h-[75px] w-[40px] flex-shrink-0">
+            <div class="absolute inset-0 bg-gray-100"></div>
+            <div class="h-full w-full bg-white flex items-center justify-center relative"
+                style="border-bottom-left-radius: 100px 110px;">
+            </div>
+        </div>
     </div>
 
-
     <!-- Button Group -->
-    <div class="flex space-x-2">
+    <div class="flex space-x-2 flex-shrink-0">
         <button class="bg-white border border-gray-300 text-blue-500 px-4 py-2 text-sm rounded-full flex items-center space-x-2 hover:bg-gray-100 transition">
-        <i class="fa-solid fa-arrows-rotate mr-4"></i>
+            <i class="fa-solid fa-arrows-rotate mr-4"></i>
             Refresh
         </button>
         <button class="bg-white border border-gray-300 px-4 py-2 text-sm text-green-500 rounded-full flex items-center space-x-2 hover:bg-gray-100 transition">
@@ -42,6 +47,7 @@
         </button>
     </div>
 </div>
+
 
 <div class="relative overflow-x-auto mx-0 mb-2 bg-gray-100 p-6 rounded-tr-xl rounded-br-xl rounded-bl-xl">
         <table class="w-full rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500 dark:text-gray-400">
