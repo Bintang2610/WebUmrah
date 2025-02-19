@@ -14,7 +14,7 @@
         @vite(['resources/js/app.js'])
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
-    <section class="">
+    <section class="container mx-auto px-4">
         
         <x-navbar></x-navbar>
 
@@ -23,6 +23,8 @@
         <div class="max-w-screen-xl mx-8 my-8 rounded-2xl grid grid-cols-2 gap-4">
             <x-chart></x-chart>
         </div>
+
+        <x-datajh></x-datajh>
 
     </section>
 </html>

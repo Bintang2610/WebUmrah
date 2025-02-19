@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -8,13 +9,8 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/dashboard', function () {
-    $data = [
-        'labels' => ['2020', '2021', '2022', '2023', '2024'],
-        'values' => [100, 200, 300, 400, 500]
-    ];
-    return view('dashboard', compact('data'));
-});
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/data', function () {
     return view('data');
 });
+Route::get('/dashboard/datajh', [DashboardController::class, 'dataJh'])->name('dashboard.datajh');
