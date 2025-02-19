@@ -1,4 +1,4 @@
-<div class="max-w-screen-xl mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
+<div class="w-dvh mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
     <!-- Navbar -->
     <div class="flex items-center justify-between">
         <!-- Header Dashboard -->
