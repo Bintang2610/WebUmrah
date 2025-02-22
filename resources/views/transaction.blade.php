@@ -16,13 +16,17 @@
     </head>
     <section class="container mx-auto px-4">
         
-        <x-navbar></x-navbar>
+    <x-navbar></x-navbar>
 
-        <x-newtrcs></x-newtrcs>
-
-        <div class="max-w-screen-xl mx-8 my-8 rounded-2xl grid grid-cols-2 gap-4">
-            <x-chart></x-chart>
-        </div>
+    @if ($type == 'datawl')
+        <x-trcswl></x-trcswl>
+    @elseif ($type == 'datawd')
+        <x-trcswd></x-trcswd>
+    @elseif ($type == 'dataju')
+        <x-trcsju></x-trcsju>
+    @elseif ($type == 'datajh')
+        <x-trcsjh></x-trcsjh>
+    @endif
 
     </section>
 </html>

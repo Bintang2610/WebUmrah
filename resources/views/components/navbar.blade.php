@@ -14,7 +14,7 @@
         <!-- Menu Navbar di Tengah -->
         <div class="flex space-x-6">
             <x-navbar-link href="/dashboard" :active="request()->is('dashboard*')">Dashboard</x-nav-link>
-            <x-navbar-link href="/data" :active="request()->is('data')">Data</x-nav-link>
+            <x-navbar-link href="/transaction" :active="request()->is('transaction*')">Transaksi</x-nav-link>
         </div>
 
         <!-- Tombol di Kanan -->
@@ -35,39 +35,10 @@
     </div>
 
     <!-- Header Dashboard -->
-    <div class="mt-6 px-2">
+     <div class="mt-6 px-2">
         <h2 class="text-2xl font-bold text-black">Dashboard</h2>
     </div>
-
-    <!-- 4 Kolom Menyamping -->
-    <div class="grid grid-cols-4 gap-4 px-2 mt-4 py- bg">
-    <a href="{{ route('dashboard.datawl') }}" 
-        class="{{ request()->is('dashboard/datawisataluarnegeri') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
-               text-gray-800 p-6 rounded-xl block">
-        <p class="pb-2 text-lg">Wisata Luar Negeri</p>
-        <p class="text-4xl font-semibold">67</p>
-    </a>
-
-    <a href="{{ route('dashboard.datawd') }}" 
-        class="{{ request()->is('dashboard/datawisatadomestik') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
-               text-gray-800 p-6 rounded-xl block">
-        <p class="pb-2 text-lg">Wisata Domestik</p>
-        <p class="text-4xl font-semibold">39</p>
-    </a>
-
-    <a href="{{ route('dashboard.dataju') }}" 
-        class="{{ request()->is('dashboard/datajamaahumrah') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
-               text-gray-800 p-6 rounded-xl block">
-        <p class="pb-2 text-lg">Jamaah Umrah</p>
-        <p class="text-4xl font-semibold">53</p>
-    </a>
-
-    <a href="{{ route('dashboard.datajh') }}" 
-        class="{{ request()->is('dashboard/datajamaahhaji') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
-               text-gray-800 p-6 rounded-xl block">
-        <p class="pb-2 text-lg">Jamaah Haji</p>
-        <p class="text-4xl font-semibold">7</p>
-    </a>
-</div>
+    
+    <x-navbar-data></x-navbar-data>
 
 </div>

@@ -17,3 +17,10 @@ Route::get('/dashboard/datajamaahhaji', [DashboardController::class, 'dataJh'])-
 Route::get('/dashboard/datajamaahumrah', [DashboardController::class, 'dataJu'])->name('dashboard.dataju');
 Route::get('/dashboard/datawisataluarnegeri', [DashboardController::class, 'dataWl'])->name('dashboard.datawl');
 Route::get('/dashboard/datawisatadomestik', [DashboardController::class, 'dataWd'])->name('dashboard.datawd');
+Route::get('/transaction', function () {
+    return redirect()->route('transaction', 'datawl');
+});
+Route::get('/transaction/{type}', function ($type) {
+    return view('transaction', compact('type'));
+})->name('transaction');
+
