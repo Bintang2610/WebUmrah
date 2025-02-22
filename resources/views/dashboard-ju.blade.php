@@ -17,6 +17,6 @@
         
         <x-navbar></x-navbar>
 
-        <x-datajh></x-datajh>
+        <x-dataju></x-dataju>
     </section>
 </html>

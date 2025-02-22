@@ -25,4 +25,16 @@ class DashboardController extends Controller
     {
         return view('dashboard-jh'); // Pastikan ada file resources/views/dashboard-datajh.blade.php
     }
+    public function dataWd()
+    {
+        return view('dashboard-wd'); // Pastikan ada file resources/views/dashboard-datajh.blade.php
+    }
+    public function dataWl()
+    {
+        return view('dashboard-wl'); // Pastikan ada file resources/views/dashboard-datajh.blade.php
+    }
+    public function dataJu()
+    {
+        return view('dashboard-ju'); // Pastikan ada file resources/views/dashboard-datajh.blade.php
+    }
 }

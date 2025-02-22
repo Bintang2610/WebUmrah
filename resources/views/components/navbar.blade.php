@@ -13,7 +13,7 @@
 
         <!-- Menu Navbar di Tengah -->
         <div class="flex space-x-6">
-            <x-navbar-link href="/dashboard" :active="request()->is('dashboard')">Dashboard</x-nav-link>
+            <x-navbar-link href="/dashboard" :active="request()->is('dashboard*')">Dashboard</x-nav-link>
             <x-navbar-link href="/data" :active="request()->is('data')">Data</x-nav-link>
         </div>
 
@@ -41,23 +41,33 @@
 
     <!-- 4 Kolom Menyamping -->
     <div class="grid grid-cols-4 gap-4 px-2 mt-4 py- bg">
-        <a href="{{ route('dashboard.datajh') }}">
-        <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
-            <p class="pb-2 text-lg">Wisata Luar Negeri</p>
-            <p class="text-4xl font-semibold">67</p>
-        </div>
-        </a>
-        <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
-            <p class="pb-2 text-lg">Wisata Domestrik</p>
-            <p class="text-4xl font-semibold">39</p>
-        </div>
-        <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
-            <p class="pb-2 text-lg">Jamaah Umrah</p>
-            <p class="text-4xl font-semibold">53</p>
-        </div>
-        <div class="bg-white bg-opacity-50 text-gray-800 p-6 rounded-xl">
-            <p class="pb-2 text-lg">Jamaah Haji</p>
-            <p class="text-4xl font-semibold">7</p>
-        </div>
-    </div>
+    <a href="{{ route('dashboard.datawl') }}" 
+        class="{{ request()->is('dashboard/datawisataluarnegeri') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
+               text-gray-800 p-6 rounded-xl block">
+        <p class="pb-2 text-lg">Wisata Luar Negeri</p>
+        <p class="text-4xl font-semibold">67</p>
+    </a>
+
+    <a href="{{ route('dashboard.datawd') }}" 
+        class="{{ request()->is('dashboard/datawisatadomestik') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
+               text-gray-800 p-6 rounded-xl block">
+        <p class="pb-2 text-lg">Wisata Domestik</p>
+        <p class="text-4xl font-semibold">39</p>
+    </a>
+
+    <a href="{{ route('dashboard.dataju') }}" 
+        class="{{ request()->is('dashboard/datajamaahumrah') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
+               text-gray-800 p-6 rounded-xl block">
+        <p class="pb-2 text-lg">Jamaah Umrah</p>
+        <p class="text-4xl font-semibold">53</p>
+    </a>
+
+    <a href="{{ route('dashboard.datajh') }}" 
+        class="{{ request()->is('dashboard/datajamaahhaji') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }} 
+               text-gray-800 p-6 rounded-xl block">
+        <p class="pb-2 text-lg">Jamaah Haji</p>
+        <p class="text-4xl font-semibold">7</p>
+    </a>
+</div>
+
 </div>
