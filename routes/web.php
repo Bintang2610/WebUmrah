@@ -9,18 +9,18 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/data', function () {
-    return view('data');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
-Route::get('/dashboard/datajamaahhaji', [DashboardController::class, 'dataJh'])->name('dashboard.datajh');
-Route::get('/dashboard/datajamaahumrah', [DashboardController::class, 'dataJu'])->name('dashboard.dataju');
-Route::get('/dashboard/datawisataluarnegeri', [DashboardController::class, 'dataWl'])->name('dashboard.datawl');
-Route::get('/dashboard/datawisatadomestik', [DashboardController::class, 'dataWd'])->name('dashboard.datawd');
-Route::get('/transaction', function () {
-    return redirect()->route('transaction', 'datawl');
-});
+Route::get('/dashboard/{type}', function ($type) {
+    return view('dashboard-data', compact('type'));
+})->name('dashboard');
 Route::get('/transaction/{type}', function ($type) {
     return view('transaction', compact('type'));
 })->name('transaction');
-
+Route::get('/transaction', function () {
+    return redirect()->route('transaction', 'datawl');
+});
+Route::get('/tambahdata', function () {
+    return view('add-data');
+});
