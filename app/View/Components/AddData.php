@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Trcswd extends Component
+class AddData extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Trcswd extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.trcswd');
+        return view('components.add-data');
     }
 }

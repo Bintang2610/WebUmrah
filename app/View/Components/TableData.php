@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Dataju extends Component
+class TableData extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Dataju extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.dataju');
+        return view('components.table-data');
     }
 }

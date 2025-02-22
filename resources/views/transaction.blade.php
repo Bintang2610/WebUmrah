@@ -15,18 +15,24 @@
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
     <section class="container mx-auto px-4">
-        
-    <x-navbar></x-navbar>
 
-    @if ($type == 'datawl')
-        <x-trcswl></x-trcswl>
-    @elseif ($type == 'datawd')
-        <x-trcswd></x-trcswd>
-    @elseif ($type == 'dataju')
-        <x-trcsju></x-trcsju>
-    @elseif ($type == 'datajh')
-        <x-trcsjh></x-trcsjh>
-    @endif
+    @php
+        $page = request()->segment(1) === 'dashboard' ? 'dashboard' : 'transaction';
+        $type = request()->segment(2) ?? 'datawl'; // Default ke 'datawl' jika tidak ada segment 2
+
+        // Mapping nama label berdasarkan type
+        $labels = [
+            'datawl' => 'Data Wisata Luar Negeri',
+            'datawd' => 'Data Wisata Domestik',
+            'dataju' => 'Data Peserta Jamaah Umrah',
+            'datajh' => 'Data Peserta Jamaah Haji'
+        ];
+
+        $title = $labels[$type] ?? 'Data Tidak Diketahui';
+    @endphp
+        
+        <x-navbar :type="$type" :page="$page"></x-navbar>
+        <x-table-temp :type="$type" :page="$page" :title="$title"></x-table-temp>
 
     </section>
 </html>

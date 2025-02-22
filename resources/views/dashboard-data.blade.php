@@ -15,8 +15,22 @@
     </head>
     <section class="container mx-auto px-4">
         
-        <x-navbar></x-navbar>
+    @php
+        $page = request()->segment(1) === 'dashboard' ? 'dashboard' : 'transaction';
+        $type = request()->segment(2) ?? 'datawl'; // Default ke 'datawl' jika tidak ada segment 2
 
-        <x-datajh></x-datajh>
+        // Mapping nama label berdasarkan type
+        $labels = [
+            'datawl' => 'Data Wisata Luar Negeri',
+            'datawd' => 'Data Wisata Domestik',
+            'dataju' => 'Data Peserta Jamaah Umrah',
+            'datajh' => 'Data Peserta Jamaah Haji'
+        ];
+
+        $title = $labels[$type] ?? 'Data Tidak Diketahui';
+    @endphp
+
+    <x-navbar :type="$type" :page="$page"></x-navbar>
+    <x-table-temp :type="$type" :page="$page" :title="$title"></x-table-temp>
     </section>
 </html>
