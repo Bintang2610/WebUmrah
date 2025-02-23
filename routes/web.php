@@ -31,3 +31,8 @@ Route::get('/dashboard/{type}/tambahdata', function ($type) {
 Route::get('/transaction/{type}/tambahdata', function ($type) {
     return view('add-data', compact('type'));
 })->name('transaction.add-data');
+
+Route::get('/ubahdata', function () {
+    return view('change-data');
+});
+

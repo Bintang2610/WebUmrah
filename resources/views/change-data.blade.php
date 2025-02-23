@@ -12,26 +12,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         @vite('resources/css/app.css')
         @vite(['resources/js/app.js'])
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
     <section class="container mx-auto px-4">
         
-    @php
-        $page = request()->segment(1) === 'dashboard' ? 'dashboard' : 'transaction';
-        $type = request()->segment(2) ?? 'datawl'; // Default ke 'datawl' jika tidak ada segment 2
-
-        // Mapping nama label berdasarkan type
-        $labels = [
-            'datawl' => 'Data Wisata Luar Negeri',
-            'datawd' => 'Data Wisata Domestik',
-            'dataju' => 'Data Peserta Jamaah Umrah',
-            'datajh' => 'Data Peserta Jamaah Haji'
-        ];
-
-        $title = $labels[$type] ?? 'Data Tidak Diketahui';
-    @endphp
-
-    <x-navbar :type="$type" :page="$page"></x-navbar>
-    <x-table-temp :type="$type" :page="$page" :title="$title"></x-table-temp>
+    <x-change-data></x-change-data>
 
     </section>
 </html>

@@ -103,14 +103,18 @@
                         </div>
                     </td>
                     <td class="px-6 py-4 text-yellow-400 text-center">
-                        <div class="flex justify-center items-center">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
+                        <a href="/ubahdata">
+                            <div class="flex justify-center items-center">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </a>
                     </td>
                     <td class="px-6 py-4 text-red-500 text-center">
-                        <div class="flex justify-center items-center">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
+                        <button data-open-del type="button">
+                            <div class="flex justify-center items-center">
+                                    <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                        </button>
                     </td>
                 </tr>
                 <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -171,15 +175,43 @@
                         </div>
                     </td>
                     <td class="px-6 py-4 text-yellow-400 text-center">
-                        <div class="flex justify-center items-center">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
+                        <a href="/ubahdata">
+                            <div class="flex justify-center items-center">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                        </a>
                     </td>
                     <td class="px-6 py-4 text-red-500 text-center">
-                        <div class="flex justify-center items-center">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
+                        <button data-open-del type="button">
+                            <div class="flex justify-center items-center">
+                                    <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                        </button>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+<div id="delmodal" class="fixed text-black inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-1/4">
+        <!-- Isi Modal -->
+        <div class="mt-2 flex justify-center items-center text-red-500 text-center text-4xl">
+            <i class="fa-solid fa-trash-can"></i>
+        </div>
+
+        <div class="mt-4 flex justify-center items-center text-black text-center text-md">
+            <p>Anda yakin akan menghapus data?</p>
+        </div>
+
+        <!-- Footer Modal -->
+        <div class="mt-4 flex justify-center items-center space-x-4">
+            <button data-close-del class="px-6 py-2 bg-gray-300 text-black rounded-lg">
+                Batal
+            </button>
+            <button data-close-del class="px-4 py-2 bg-red-500 text-white rounded-lg">
+                Hapus
+            </button>
+        </div>
+    </div>
+</div>
+        
