@@ -50,7 +50,7 @@
             <i class="fa-solid fa-arrows-rotate mr-4"></i>
             Refresh
         </button>
-        <a href="/tambahdata" class="bg-white border border-gray-300 px-4 py-2 text-sm text-green-500 rounded-full flex items-center space-x-2 hover:bg-gray-100 transition">
+        <a href="{{ url((request()->is('transaction/*') ? '/transaction/' : '/dashboard/') . $type . '/tambahdata') }}" class="bg-white border border-gray-300 px-4 py-2 text-sm text-green-500 rounded-full flex items-center space-x-2 hover:bg-gray-100 transition">
             <i class="fa-solid fa-plus mr-4"></i>
             Tambah Data
         </a>

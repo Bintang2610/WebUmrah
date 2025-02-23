@@ -32,5 +32,6 @@
 
     <x-navbar :type="$type" :page="$page"></x-navbar>
     <x-table-temp :type="$type" :page="$page" :title="$title"></x-table-temp>
+    
     </section>
 </html>
