@@ -1,9 +1,16 @@
+@props(['type'])
+
+@php
+    // Buat ID unik berdasarkan tipe data
+    $chartId = "chart-" . $type;
+@endphp
+
 <div class="w-full bg-white rounded-2xl shadow-sm dark:bg-gray-800 p-4 md:p-6">
   <!-- Navbar -->
   <div class="flex items-center justify-between mb-6">
         <!-- Header Dashboard -->
         <div class="px-2">
-            <h2 class="text-xl font-medium text-black">Data Peserta Wisata Luar Negeri</h2>
+            <h2 id="title-{{ $chartId }}" class="text-xl font-medium text-black">}</h2>
         </div>
 
         <!-- Tombol di Kanan -->
@@ -35,5 +42,5 @@
 
     </div>
 
-  <div id="chart"></div>
+    <div class="chart" id="{{ $chartId }}" data-type="{{ $type }}"></div>
 </div>

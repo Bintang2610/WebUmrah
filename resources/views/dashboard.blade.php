@@ -21,8 +21,11 @@
         <x-newtrcs></x-newtrcs>
 
         <div class="max-w-screen-xl mx-8 my-8 rounded-2xl grid grid-cols-2 gap-4">
-            <x-chart></x-chart>
-        </div>
+    <x-chart type="datawl"></x-chart>
+    <x-chart type="datajh"></x-chart>
+    <x-chart type="datawd"></x-chart>
+    <x-chart type="dataju"></x-chart>
+</div>
 
     </section>
 </html>
