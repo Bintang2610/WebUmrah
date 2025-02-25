@@ -5,14 +5,6 @@
         <div class="px-2">
             <h2 class="text-xl font-medium text-black">Transaksi Terbaru</h2>
         </div>
-
-        <!-- Tombol di Kanan -->
-        <div class="flex pr-2">
-        <button class="bg-white border border-black text-black px-3 py-2 text-sm rounded-lg flex items-center space-x-2 hover:bg-gray-100 transition">
-            <p>Seluruh Data</p>
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-        </div>
     </div>
 
     <div class="relative overflow-x-auto mt-4 mb-2 sm:rounded-lg">

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function openHub() {
+    function openHub(event) {
+        event.stopPropagation(); // Mencegah event bubbling jika tombol dalam elemen lain
         document.getElementById("hubmodal").classList.remove("hidden");
     }
 
@@ -15,5 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener untuk tombol tutup modal
     document.querySelectorAll("[data-close-hub]").forEach(btn => {
         btn.addEventListener("click", closeHub);
+    });
+
+    // Menutup modal jika klik di luar modal
+    document.addEventListener("click", function (event) {
+        let modal = document.getElementById("hubmodal");
+        if (!modal.contains(event.target) && !event.target.matches("[data-open-hub]")) {
+            closeHub();
+        }
     });
 });

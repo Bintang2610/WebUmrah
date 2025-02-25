@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function openDel() {
+    function openDel(event) {
+        event.stopPropagation(); // Mencegah event bubbling jika ada event di elemen induk
         document.getElementById("delmodal").classList.remove("hidden");
     }
 
@@ -15,5 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener untuk tombol tutup modal
     document.querySelectorAll("[data-close-del]").forEach(btn => {
         btn.addEventListener("click", closeDel);
+    });
+
+    // Menutup modal jika klik di luar modal
+    document.addEventListener("click", function (event) {
+        let modal = document.getElementById("delmodal");
+        if (!modal.contains(event.target) && !event.target.matches("[data-open-del]")) {
+            closeDel();
+        }
     });
 });

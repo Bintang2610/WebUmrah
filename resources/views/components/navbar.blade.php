@@ -18,16 +18,7 @@
         </div>
 
         <!-- Tombol di Kanan -->
-        <div class="flex space-x-2 pr-2">
-            <button class="bg-transparent border border-white text-white px-3 py-2 text-xs rounded-full hover:bg-white hover:bg-opacity-20 transition">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition">
-                <i class="fa-regular fa-envelope"></i>
-            </button>
-            <button class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition">
-                <i class="fa-solid fa-bell"></i>
-            </button>
+        <div class="flex ml-24 space-x-2 pr-2">
             <button class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition">
                 <i class="fa-regular fa-user"></i>
             </button>

@@ -5,15 +5,7 @@
     <div class="flex items-center mb-4 justify-between">
         <!-- Header Dashboard -->
         <div class="px-2">
-            <h2 class="text-xl font-medium text-black">{{ $title }}</h2>
-        </div>
-
-        <!-- Tombol di Kanan -->
-        <div class="flex pr-2">
-        <button class="bg-white border border-black text-black px-3 py-2 text-sm rounded-lg flex items-center space-x-2 hover:bg-gray-100 transition">
-            <p>Seluruh Data</p>
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
+            <h2 class="text-xl font-medium text-black">Data {{ $title }}</h2>
         </div>
     </div>
 

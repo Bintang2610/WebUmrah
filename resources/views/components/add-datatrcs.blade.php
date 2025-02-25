@@ -13,7 +13,7 @@
     <div class="flex items-center mb-8 justify-between">
         <!-- Header Dashboard -->
         <div class="px-2">
-            <h2 class="text-xl font-medium text-black">Data Peserta Wisata Luar Negeri</h2>
+            <h2 class="text-xl font-medium text-black">Data Peserta</h2>
         </div>
     </div>
 

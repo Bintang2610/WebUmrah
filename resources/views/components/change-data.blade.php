@@ -13,7 +13,7 @@
     <div class="flex items-center mb-8 justify-between">
         <!-- Header Dashboard -->
         <div class="px-2">
-            <h2 class="text-xl font-medium text-black">Data Peserta Wisata Luar Negeri</h2>
+            <h2 class="text-xl font-medium text-black">Data Peserta</h2>
         </div>
     </div>
 
@@ -161,7 +161,7 @@
                     <th scope="col" class="px-6 py-3">
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Nama Jamaah
+                        Nama Peserta
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Sex

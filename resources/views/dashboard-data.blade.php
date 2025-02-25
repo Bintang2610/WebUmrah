@@ -21,10 +21,10 @@
 
         // Mapping nama label berdasarkan type
         $labels = [
-            'datawl' => 'Data Wisata Luar Negeri',
-            'datawd' => 'Data Wisata Domestik',
-            'dataju' => 'Data Peserta Jamaah Umrah',
-            'datajh' => 'Data Peserta Jamaah Haji'
+            'datawl' => 'Peserta Wisata Luar Negeri',
+            'datawd' => 'Peserta Wisata Domestik',
+            'dataju' => 'Jamaah Umrah',
+            'datajh' => 'Jamaah Haji'
         ];
 
         $title = $labels[$type] ?? 'Data Tidak Diketahui';
