@@ -4,3 +4,4 @@ import './chart';
 import './delmodal';
 import './hubmodal';
 import './participantmodal';
+import './formimg';

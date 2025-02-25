@@ -28,42 +28,37 @@
         <!-- Kolom Kiri -->
         <div>
             <!-- Nama Jamaah -->
-            <label class="block text-sm mb-2 font-medium text-gray-700">Nama Jamaah</label>
-            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+            <label class="block text-sm mb-2 font-medium text-gray-700">Nama Peserta</label>
+            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Sukardi Santari</textarea>
 
 
             <!-- Foto Diri -->
             <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Foto Diri</label>
             <div class="w-full bg-white rounded-lg p-2 text-center relative">
                 <div class="border-2 border-dashed border-gray-300 rounded-lg p-2">
-                <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="previewImage(event)">
-                <label for="fileInput" class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
-                    <div id="previewContainer" class="flex flex-col items-center justify-center">
-                        <i class="fa-regular fa-image text-3xl text-gray-400"></i>
-                        <p class="mt-2 text-sm text-gray-400">
-                            <i class="fa-solid fa-circle-exclamation mr-1"></i>
-                            Seret dan lepas atau klik untuk pilih gambar
-                        </p>
-                    </div>
-                    <img id="previewImage" class="hidden w-full h-full object-cover rounded-lg" />
-                </label>
+                    <input type="file" id="fileInput" class="hidden" accept="image/*">
+                    <label for="fileInput" class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
+                        <!-- Hapus class "hidden" agar gambar langsung muncul -->
+                        <img id="previewImage" src="{{ asset('images/foto.jpeg') }}" class="w-full h-full object-cover rounded-lg" />
+                    </label>
                 </div>
             </div>
+
         </div>
 
         <!-- Kolom Kanan -->
         <div>
             <!-- NIK/No. KTP -->
             <label class="block text-sm mb-2 font-medium text-gray-700">NIK/No. KTP</label>
-            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">3172032803800011</textarea>
 
             <!-- Tempat Lahir -->
             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tempat Lahir</label>
-            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Banyumas</textarea>
 
             <!-- Tanggal Lahir -->
             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tanggal Lahir</label>
-            <input type="date" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+            <input type="date" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none" value="1983-03-28"></input>
         </div>
     </div>
 
@@ -72,7 +67,7 @@
         <label class="block text-sm mb-3 font-medium text-gray-700">Jenis Kelamin</label>
         <div class="flex items-center text-sm gap-x-4 space-x-4 mt-2">
             <label class="flex items-center">
-                <input type="radio" name="gender" value="L" class="mr-2">
+                <input type="radio" name="gender" value="L" class="mr-2" checked>
                 Laki-laki (L)
             </label>
             <label class="flex items-center">
@@ -82,20 +77,7 @@
         </div>
     </div>
 </div>
-<script>
-    function previewImage(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('previewImage').src = e.target.result;
-                document.getElementById('previewImage').classList.remove('hidden');
-                document.getElementById('previewContainer').classList.add('hidden');
-            }
-            reader.readAsDataURL(file);
-        }
-    }
-</script>
+
 <div class="relative mx-2 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
     <!-- Judul -->
     <div class="text-left mb-6">
@@ -108,22 +90,22 @@
         <div>
             <!-- No. Paspor -->
             <label class="block text-sm mb-2 font-medium text-gray-700">No. Paspor</label>
-            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">E6964776</textarea>
 
             <!-- Issuing office -->
             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Issuing office</label>
-            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+            <textarea class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Cilacap</textarea>
         </div>
 
         <!-- Kolom Kanan -->
         <div>
             <!-- Date of issued -->
             <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-            <input type="date" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+            <input type="date" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none" value="2024-03-01"></input>
 
             <!-- Tanggal Lahir -->
             <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
-            <input type="date" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+            <input type="date" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none" value="2024-03-01"></input>
         </div>
     </div>
 </div>
@@ -138,7 +120,7 @@
         <label class="block text-sm mb-3 font-medium text-gray-700">Jenis Hubungan</label>
         <div class="flex items-center text-sm gap-x-4 space-x-4 mt-2">
             <label class="flex items-center">
-                <input type="radio" name="gender" value="L" class="mr-2">
+                <input type="radio" name="gender" value="L" class="mr-2" checked>
                 Keluarga
             </label>
             <label class="flex items-center">

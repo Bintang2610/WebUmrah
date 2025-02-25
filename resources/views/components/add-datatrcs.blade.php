@@ -36,17 +36,17 @@
             <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Foto Bukti Transaksi</label>
             <div class="w-full bg-white rounded-lg p-2 text-center relative">
                 <div class="border-2 border-dashed border-gray-300 rounded-lg p-2">
-                <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="previewImage(event)">
-                <label for="fileInput" class="cursor-pointer flex flex-col items-center justify-center w-full h-[216px]">
-                    <div id="previewContainer" class="flex flex-col items-center justify-center">
-                        <i class="fa-regular fa-image text-3xl text-gray-400"></i>
-                        <p class="mt-2 text-sm text-gray-400">
-                            <i class="fa-solid fa-circle-exclamation mr-1"></i>
-                            Seret dan lepas atau klik untuk pilih gambar
-                        </p>
-                    </div>
-                    <img id="previewImage" class="hidden w-full h-full object-cover rounded-lg" />
-                </label>
+                    <input type="file" id="fileInput" class="hidden" accept="image/*">
+                    <label for="fileInput" class="cursor-pointer flex flex-col items-center justify-center w-full h-[216px]">
+                        <div id="previewContainer" class="flex flex-col items-center justify-center">
+                            <i class="fa-regular fa-image text-3xl text-gray-400"></i>
+                            <p class="mt-2 text-sm text-gray-400">
+                                <i class="fa-solid fa-circle-exclamation mr-1"></i>
+                                Seret dan lepas atau klik untuk pilih gambar
+                            </p>
+                        </div>
+                        <img id="previewImage" class="hidden w-full h-full object-cover rounded-lg" />
+                    </label>
                 </div>
             </div>
         </div>
@@ -86,20 +86,6 @@
         </div>
     </div>
 </div>
-<script>
-    function previewImage(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('previewImage').src = e.target.result;
-                document.getElementById('previewImage').classList.remove('hidden');
-                document.getElementById('previewContainer').classList.add('hidden');
-            }
-            reader.readAsDataURL(file);
-        }
-    }
-</script>
     <div class="flex items-center my-12 justify-between">
     <!-- Header Dashboard -->
     <div>
