@@ -18,11 +18,19 @@
         </div>
 
         <!-- Tombol di Kanan -->
-        <div class="flex ml-24 space-x-2 pr-2">
-            <button class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition">
-                <i class="fa-regular fa-user"></i>
-            </button>
-        </div>
+        <div id="divButton" class="relative rounded-full p-2 flex items-center">
+    <!-- Tombol Profil -->
+    <button id="profileButton" class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition ml-24">
+        <i class="fa-regular fa-user"></i>
+    </button>
+
+    <!-- Tombol Keluar -->
+    <a href="/login" id="logoutButton" class="hidden absolute left-2 top-2 flex items-center space-x-1 bg-white text-red-500 px-4 py-2 text-sm rounded-full border border-red-500 transition">
+        <i class="fa-solid fa-sign-out-alt"></i>
+        <span>Keluar</span>
+    </a>
+</div>
+
     </div>
 
     <!-- Header Dashboard -->
