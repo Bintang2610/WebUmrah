@@ -25,10 +25,13 @@
     </button>
 
     <!-- Tombol Keluar -->
-    <a href="/login" id="logoutButton" class="hidden absolute left-2 top-2 flex items-center space-x-1 bg-white text-red-500 px-4 py-2 text-sm rounded-full border border-red-500 transition">
-        <i class="fa-solid fa-sign-out-alt"></i>
-        <span>Keluar</span>
-    </a>
+    <form action="{{ route('logout') }}" method="POST" class="absolute left-2 top-2">
+        @csrf
+        <button type="submit" class="flex items-center space-x-1 bg-white text-red-500 px-4 py-2 text-sm rounded-full border border-red-500 transition">
+            <i class="fa-solid fa-sign-out-alt"></i>
+            <span>Keluar</span>
+        </button>
+    </form>
 </div>
 
     </div>
@@ -37,7 +40,7 @@
      <div class="mt-6 px-2">
         <h2 class="text-2xl font-bold text-black">Dashboard</h2>
     </div>
-    
+
     <x-navbar-data></x-navbar-data>
 
 </div>
