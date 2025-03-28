@@ -5,4 +5,5 @@ import './delmodal';
 import './hubmodal';
 import './participantmodal';
 import './formimg';
-import './profilbtn'
+import './profilbtn';
+import './navbarwlcm';
