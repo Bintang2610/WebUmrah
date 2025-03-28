@@ -9,6 +9,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tentang', function () {
+    return view('about');
+});
+
+
+Route::get('/portofolio', function () {
+    return view('porto');
+});
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');

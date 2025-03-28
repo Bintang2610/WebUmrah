@@ -7,3 +7,6 @@ import './participantmodal';
 import './formimg';
 import './profilbtn';
 import './navbarwlcm';
+import "./carousel.js";
+import "./suratmodal.js";
+
