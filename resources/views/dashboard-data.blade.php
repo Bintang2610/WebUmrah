@@ -14,7 +14,7 @@
         @vite(['resources/js/app.js'])
     </head>
     <section class="container mx-auto px-4">
-        
+
     @php
         $page = request()->segment(1) === 'dashboard' ? 'dashboard' : 'transaction';
         $type = request()->segment(2) ?? 'datawl'; // Default ke 'datawl' jika tidak ada segment 2

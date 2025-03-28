@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\WisataLuarNegeriController;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
@@ -22,9 +23,11 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/dashboard/{type}', function ($type) {
-        return view('dashboard-data', compact('type'));
-    });
+    Route::get('/dashboard/{type?}', function ($type = null) {
+        return view($type ? 'dashboard-data' : 'dashboard', compact('type'));
+    })->name('dashboard');
+
+    Route::post('/wisata-luar-negeri/store', [WisataLuarNegeriController::class, 'store'])->name('wisata.store');
 
     Route::get('/transaction', function () {
         return redirect()->route('transaction', 'datawl');
