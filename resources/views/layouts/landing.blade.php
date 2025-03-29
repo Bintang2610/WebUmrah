@@ -37,8 +37,6 @@
             @yield('content')  
         </main>
         
-        <footer class="text-center p-4 text-gray-600">
-            © 2025 Elkhadijah. All Rights Reserved.
-        </footer>
+        <x-footer-wlcm></x-footer-wlcm>
     </section>
 </html>

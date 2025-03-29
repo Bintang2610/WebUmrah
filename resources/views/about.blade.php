@@ -135,9 +135,9 @@
     </div>
 </div>
 
-<div class="flex w-full gap-12 px-10 mt-14">
+<div class="flex mb-12 w-full gap-12 px-10 mt-14">
     <!-- Card 1 -->
-    <div class="relative w-1/2 h-60 rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-open-surat1>
+    <div class="relative w-1/2 h-60 rounded-2xl overflow-hidden shadow-2xl cursor-pointer" data-open-surat1>
     <div class="absolute inset-0 bg-cover bg-center" 
          style="background-image: url('images/surat1.png'); background-position: top; background-size: cover;">
     </div>
@@ -156,7 +156,7 @@
 </div>
 
     <!-- Card 2 -->
-    <div class="relative w-1/2 h-60 rounded-lg overflow-hidden shadow-lg cursor-pointer" data-open-surat2>
+    <div class="relative w-1/2 h-60 rounded-lg overflow-hidden shadow-2xl cursor-pointer" data-open-surat2>
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/surat2.png'); background-position: top; background-size: cover;"></div>
 
         <div class="absolute inset-0 bg-black opacity-20"></div>
