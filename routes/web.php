@@ -1,10 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WisataLuarNegeriController;
+use App\Http\Controllers\WisataDomestikController;
+use App\Http\Controllers\JamaahUmrahController;
+use App\Http\Controllers\JamaahHajiController;
+
 use App\Http\Controllers\TransaksiController;
-use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,7 +46,21 @@ Route::middleware(['auth'])->group(function () {
         return view('add-data', compact('type'));
     })->name('dashboard.add-data');
 
+    //LuarNegeri
     Route::post('/wisata-luar-negeri/store', [WisataLuarNegeriController::class, 'store'])->name('wisata.store');
+    Route::get('/add-data', [WisataLuarNegeriController::class, 'index'])->name('wisata.add');
+
+    //Domestik
+    Route::post('/wisata-domestik/store', [WisataDomestikController::class, 'store'])->name('domestik.store');
+
+    //JamaahUmrah
+    Route::post('/jamaah-umrah/store', [JamaahUmrahController::class, 'store'])->name('umrah.store');
+
+    //JamaahHaji
+    Route::post('/jamaah-haji/store', [WisataLuarNegeriController::class, 'store'])->name('haji.store');
+
+
+
 
     //transaksi
     Route::get('/transaction', function () {

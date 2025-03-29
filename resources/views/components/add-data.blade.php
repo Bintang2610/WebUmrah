@@ -100,18 +100,21 @@
                 <div>
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">No. Paspor</label>
-                    <textarea name="no_paspor" required class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                    <textarea name="no_paspor" required
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
 
                     <!-- Issuing office -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Issuing office</label>
-                    <textarea name="issuing_office" required class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                    <textarea name="issuing_office" required
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
                 </div>
 
                 <!-- Kolom Kanan -->
                 <div>
                     <!-- Date of issued -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-                    <input type="date" name="date_of_issued" required ="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+                    <input type="date" name="date_of_issued" required
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
 
                     <!-- Tanggal Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
@@ -188,69 +191,80 @@
                         </thead>
 
                         <tbody>
-
-                            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                <th scope="row"
-                                    class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    <div class="flex justify-center items-center">
-                                        1
-                                    </div>
-                                </th>
-                                <td class="px-6 py-4">
-                                    <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto"
-                                        class="w-10 h-10 rounded-full">
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        Sukardi Santari
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        L
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        3172032803800011
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        Banyumas
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        28-03-1983
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        E6964776
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        01-03-2024
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        01-03-2024
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        Cilacap
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-green-300 text-center">
-                                    <div class="flex justify-center items-center">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                </td>
-                            </tr>
+                            @if (isset($dataWisata) && count($dataWisata) > 0)
+                                @foreach ($dataWisata as $index => $wisata)
+                                    <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            <div class="flex justify-center items-center">
+                                                {{ $index + 1 }}
+                                            </div>
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            @if ($wisata->foto_peserta)
+                                                <img src="{{ asset('storage/' . $wisata->foto_peserta) }}"
+                                                    alt="Foto Peserta" class="w-16 h-16 rounded-full">
+                                            @else
+                                                Tidak Ada Foto
+                                            @endif
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->nama_peserta }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->jenis_kelamin }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->nik }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->tempat_lahir }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->tanggal_lahir }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->no_paspor }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->date_of_issued }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->date_of_expiry }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                {{ $wisata->issuing_office }}
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-green-300 text-center">
+                                            <div class="flex justify-center items-center">
+                                                <i class="fa-solid fa-circle-check">{{ $wisata->jenis_hubungan }} </i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @else
+                                <tr>
+                                    <td colspan="5">Tidak ada data wisata tersedia</td>
+                                </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>
