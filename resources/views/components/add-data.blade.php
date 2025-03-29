@@ -10,7 +10,6 @@
 
 <form action="{{ route('wisata.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-
     <div class="w-dvh mx-8 mt-8 mb-16 px-8 py-8 bg-white text-black rounded-2xl">
 
         <div class="flex items-center mb-8 justify-between">
@@ -40,7 +39,7 @@
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Foto Diri</label>
                     <div class="w-full bg-white rounded-lg p-2 text-center relative">
                         <div class="border-2 border-dashed border-gray-300 rounded-lg p-2">
-                            <input type="file" name="foto_peserta" id="fileInput" class="hidden">
+                            <input name="foto_peserta" required type="file" id="fileInput" class="hidden">
                             <label for="fileInput"
                                 class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
                                 <div id="previewContainer" class="flex flex-col items-center justify-center">
@@ -101,23 +100,22 @@
                 <div>
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">No. Paspor</label>
-                    <textarea name="no_paspor" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                    <textarea name="no_paspor" required class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
 
                     <!-- Issuing office -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Issuing office</label>
-                    <textarea name="issuing_office" class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                    <textarea name="issuing_office" required class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
                 </div>
 
                 <!-- Kolom Kanan -->
                 <div>
                     <!-- Date of issued -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-                    <input name="date_of_issued" type="date"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+                    <input type="date" name="date_of_issued" required ="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
 
                     <!-- Tanggal Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
-                    <input name="date_of_expiry" type="date"
+                    <input type="date" name="date_of_expiry" required
                         class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
                 </div>
             </div>
@@ -384,11 +382,7 @@
 
             <!-- Header Dashboard -->
             <div>
-                <button type="submit"
-                    class="bg-green-500 text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
-                    Simpan
-                </button>
-
+                <button type="submit">Simpan</button>
                 <a href="/dashboard"
                     class="bg-green-500 text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
                     Simpan

@@ -43,8 +43,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/wisata-luar-negeri/store', [WisataLuarNegeriController::class, 'store'])->name('wisata.store');
 
-
-    
     //transaksi
     Route::get('/transaction', function () {
         return redirect()->route('transaction', 'datawl');

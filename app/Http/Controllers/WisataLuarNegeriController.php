@@ -15,22 +15,17 @@ class WisataLuarNegeriController extends Controller
             'tempat_lahir' => 'required|string|max:100',
             'tanggal_lahir' => 'required|date',
             'jenis_kelamin' => 'required|in:L,P',
-            'foto_peserta' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'no_paspor' => 'nullable|string|max:50|unique:wisata_luar_negeri,no_paspor',
-            'issuing_office' => 'nullable|string|max:100',
-            'date_of_issued' => 'nullable|date',
-            'date_of_expiry' => 'nullable|date',
+            'foto_peserta' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'no_paspor' => 'required|string|max:50|unique:wisata_luar_negeri,no_paspor',
+            'issuing_office' => 'required|string|max:100',
+            'date_of_issued' => 'required|date',
+            'date_of_expiry' => 'required|date',
             'jenis_hubungan' => 'required|in:Keluarga,Suami-istri',
         ]);
 
+        // Upload foto
         if ($request->hasFile('foto_peserta')) {
-            $file = $request->file('foto_peserta');
-            $fileName = time() . '_' . $file->getClientOriginalName();
-            $filePath = $file->storeAs('uploads', $fileName, 'public'); // Simpan di storage/public/uploads
-
-            $foto_peserta = '/storage/' . $filePath;
-        } else {
-            $foto_peserta = null;
+            $fotoPath = $request->file('foto_peserta')->store('uploads', 'public');
         }
 
         WisataLuarNegeri::create([
@@ -39,7 +34,7 @@ class WisataLuarNegeriController extends Controller
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'jenis_kelamin' => $request->jenis_kelamin,
-            'foto_peserta' => $foto_peserta,
+            'foto_peserta' => $fotoPath,
             'no_paspor' => $request->no_paspor,
             'issuing_office' => $request->issuing_office,
             'date_of_issued' => $request->date_of_issued,
@@ -47,7 +42,6 @@ class WisataLuarNegeriController extends Controller
             'jenis_hubungan' => $request->jenis_hubungan,
         ]);
 
-        return redirect()->route('dashboard.add-data', ['type' => 'wisata-luar-negeri'])
-                 ->with('success', 'Data berhasil disimpan!');
+        return redirect()->back()->with('success', 'Data berhasil disimpan.');
     }
 }

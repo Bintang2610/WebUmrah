@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->enum('jenis_kelamin', ['L', 'P']);
-            $table->string('foto_peserta')->nullable();
-            $table->string('no_paspor')->nullable()->unique();
-            $table->string('issuing_office')->nullable();
-            $table->date('date_of_issued')->nullable();
-            $table->date('date_of_expiry')->nullable();
+            $table->string('foto_peserta');
+            $table->string('no_paspor')->unique();
+            $table->string('issuing_office');
+            $table->date('date_of_issued');
+            $table->date('date_of_expiry');
             $table->enum('jenis_hubungan', ['Keluarga', 'Suami-istri']);
             $table->timestamps();
         });
