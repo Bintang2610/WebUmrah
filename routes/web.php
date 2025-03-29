@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WisataLuarNegeriController;
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
@@ -36,19 +37,26 @@ Route::middleware(['auth'])->group(function () {
         return view($type ? 'dashboard-data' : 'dashboard', compact('type'));
     })->name('dashboard');
 
+    Route::get('/dashboard/{type}/tambahdata', function ($type) {
+        return view('add-data', compact('type'));
+    })->name('dashboard.add-data');
+
     Route::post('/wisata-luar-negeri/store', [WisataLuarNegeriController::class, 'store'])->name('wisata.store');
 
+
+    
+    //transaksi
     Route::get('/transaction', function () {
         return redirect()->route('transaction', 'datawl');
     });
 
+    Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
+    Route::get('/transaksi/create', [TransaksiController::class, 'create'])->name('transaksi.create');
+    Route::post('/transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
+
     Route::get('/transaction/{type}', function ($type) {
         return view('transaction', compact('type'));
     })->name('transaction');
-
-    Route::get('/dashboard/{type}/tambahdata', function ($type) {
-        return view('add-data', compact('type'));
-    })->name('dashboard.add-data');
 
     Route::get('/transaction/{type}/tambahdata', function ($type) {
         return view('add-data', compact('type'));
