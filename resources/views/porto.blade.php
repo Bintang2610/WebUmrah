@@ -3,7 +3,7 @@
 @section('title', 'Tentang - Elkhadijah')
 
 @section('content')
-<section class="mt-20 w-full flex flex-col items-center justify-center">
+<section class="mt-20 mb-8 w-full flex flex-col items-center justify-center">
     <div class="border-2 border-gray-400 rounded-full py-2 px-5 text-center">
         <h1 class="text-md text-gray-800">Elkhadijah Mecca Medina</h1>
     </div>
