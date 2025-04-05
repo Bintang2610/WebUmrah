@@ -9,4 +9,5 @@ import './profilbtn';
 import './navbarwlcm';
 import "./carousel.js";
 import "./suratmodal.js";
-
+import "./forgotpswrd.js";
+import "./forgototp.js";

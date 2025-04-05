@@ -24,6 +24,10 @@ Route::get('/portofolio', function () {
     return view('porto');
 });
 
+Route::get('/forgotpassword', function () {
+    return view('loginforgot');
+});
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');

@@ -39,3 +39,18 @@
     position: absolute;
     left: 0; /* Memulai dari kiri */
 }
+
+.otp-input {
+    width: 45px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.otp-input:focus {
+    border-color: #3285D8;
+}

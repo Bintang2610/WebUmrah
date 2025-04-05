@@ -56,21 +56,21 @@
             @if ($type == 'datawl')
             <x-table-data></x-table-data>
             @elseif ($type == 'datawd')
-            <x-table-data></x-table-data>
+            <x-table-datawd></x-table-datawd>
             @elseif ($type == 'dataju')
-            <x-table-data></x-table-data>
+            <x-table-dataju></x-table-dataju>
             @elseif ($type == 'datajh')
-            <x-table-data></x-table-data>
+            <x-table-datajh></x-table-datajh>
             @endif
         @elseif ($page == 'transaction')
             @if ($type == 'datawl')
             <x-table-trcs></x-table-trcs>
             @elseif ($type == 'datawd')
-            <x-table-trcs></x-table-trcs>
+            <x-table-trcswd></x-table-trcswd>
             @elseif ($type == 'dataju')
-            <x-table-trcs></x-table-trcs>
+            <x-table-trcswd></x-table-trcswd>
             @elseif ($type == 'datajh')
-            <x-table-trcs></x-table-trcs>
+            <x-table-trcswd></x-table-trcswd>
             @endif
         @endif
         </div>

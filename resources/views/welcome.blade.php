@@ -21,9 +21,29 @@
     </div>
     <div class="relative w-full h-16 overflow-hidden">
         <div class="wrapper2">
-            <img src="images/komen.png" alt="Komentar" class="komentar2">
+            <img src="images/komen2.png" alt="Komentar" class="komentar2">
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
         </div>
+    </div>
+
+    <p class="text-5xl mt-24 font-semibold text-gray-700 max-w-[800px] text-center">
+        Keunggulan <span class="text-blue-500">Kami</span>
+    </p>
+
+    <div class="flex justify-center items-center mt-16">
+        <img src="images/hp.png" alt="Gambar HP" class="w-[760px]">
+    </div>
+
+    <p class="text-5xl mt-24 font-semibold text-gray-700 max-w-[800px] text-center">
+        Produk <span class="text-blue-500">Elkhadijah</span>
+    </p>
+
+    <div class="flex justify-center items-center mt-16">
+        <img src="images/produk.png" alt="Gambar HP" class="w-[1000px]">
+    </div>
+
+    <div class="bg-[#27A1FF] rounded-full mt-16 mb-10 py-4 px-8 text-center shadow-lg">
+        <a href="/portofolio" class="text-md text-white">Lihat Selengkapnya</a>
     </div>
 
 </section>
