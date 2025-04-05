@@ -15,10 +15,10 @@
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
     <section class="container mx-auto px-4">
-        
+
         <x-navbar></x-navbar>
 
-        <x-newtrcs></x-newtrcs>
+        <x-newtrcs :dataTransaksi="$dataTransaksi" />
 
         <div class="max-w-screen-xl mx-8 my-8 rounded-2xl grid grid-cols-2 gap-4">
             <x-chart type="datawl"></x-chart>

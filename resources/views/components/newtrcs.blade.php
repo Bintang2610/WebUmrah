@@ -1,3 +1,6 @@
+@props(['dataTransaksi'])
+
+
 <div class="w-dvh mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
     <!-- Navbar -->
     <div class="flex items-center justify-between">
@@ -24,76 +27,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
-                    </th>
-                    <td class="px-6 py-4">
-                        Laluna Afril Diasyifa
-                    </td>
-                    <td class="px-6 py-4">
-                        22 Juni 2024
-                    </td>
-                    <td class="px-6 py-4 text-green-500">
-                        $Rp123.000.000,00
-                    </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
-                    </th>
-                    <td class="px-6 py-4">
-                        Laluna Afril Diasyifa
-                    </td>
-                    <td class="px-6 py-4">
-                        22 Juni 2024
-                    </td>
-                    <td class="px-6 py-4 text-green-500">
-                        $Rp123.000.000,00
-                    </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
-                    </th>
-                    <td class="px-6 py-4">
-                        Laluna Afril Diasyifa
-                    </td>
-                    <td class="px-6 py-4">
-                        22 Juni 2024
-                    </td>
-                    <td class="px-6 py-4 text-green-500">
-                        $Rp123.000.000,00
-                    </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
-                    </th>
-                    <td class="px-6 py-4">
-                        Laluna Afril Diasyifa
-                    </td>
-                    <td class="px-6 py-4">
-                        22 Juni 2024
-                    </td>
-                    <td class="px-6 py-4 text-green-500">
-                        $Rp123.000.000,00
-                    </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
-                    </th>
-                    <td class="px-6 py-4">
-                        Laluna Afril Diasyifa
-                    </td>
-                    <td class="px-6 py-4">
-                        22 Juni 2024
-                    </td>
-                    <td class="px-6 py-4 text-green-500">
-                        $Rp123.000.000,00
-                    </td>
-                </tr>
+                @foreach ($dataTransaksi as $transaksi)
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
+                            {{-- Atau kalau mau pakai foto asli dari database --}}
+                            {{-- <img src="{{ asset('storage/' . $transaksi->foto_bukti_transaksi) }}" alt="Foto" class="w-10 h-10 rounded-full"> --}}
+                        </th>
+                        <td class="px-6 py-4">
+                            {{ $transaksi->nama_peserta }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ \Carbon\Carbon::parse($transaksi->tanggal_pembayaran)->translatedFormat('d F Y') }}
+                        </td>
+                        <td class="px-6 py-4 text-green-500">
+                            Rp{{ number_format($transaksi->total_tagihan, 0, ',', '.') }}
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

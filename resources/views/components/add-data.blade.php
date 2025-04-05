@@ -191,7 +191,6 @@
                         </thead>
 
                         <tbody>
-                            @if (isset($dataWisata) && count($dataWisata) > 0)
                                 @foreach ($dataWisata as $index => $wisata)
                                     <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                                         <th scope="row"
@@ -260,11 +259,6 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                            @else
-                                <tr>
-                                    <td colspan="5">Tidak ada data wisata tersedia</td>
-                                </tr>
-                            @endif
                         </tbody>
                     </table>
                 </div>
@@ -324,6 +318,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                                @foreach ($dataWisata as $index => $wisata)
                             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                                 <th scope="row"
                                     class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -333,61 +328,66 @@
                                     </div>
                                 </th>
                                 <td class="px-6 py-4">
-                                    <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto"
-                                        class="w-10 h-10 rounded-full">
+                                    @if ($wisata->foto_peserta)
+                                        <img src="{{ asset('storage/' . $wisata->foto_peserta) }}"
+                                            alt="Foto Peserta" class="w-16 h-16 rounded-full">
+                                    @else
+                                        Tidak Ada Foto
+                                    @endif
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        Sukardi Santari
+                                        {{ $wisata->nama_peserta }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        L
+                                        {{ $wisata->jenis_kelamin }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        3172032803800011
+                                        {{ $wisata->nik }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        Banyumas
+                                        {{ $wisata->tempat_lahir }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        28-03-1983
+                                        {{ $wisata->tanggal_lahir }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        E6964776
+                                        {{ $wisata->no_paspor }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        01-03-2024
+                                        {{ $wisata->date_of_issued }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        01-03-2024
+                                        {{ $wisata->date_of_expiry }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-                                        Cilacap
+                                        {{ $wisata->issuing_office }}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-green-300 text-center">
                                     <div class="flex justify-center items-center">
-                                        <i class="fa-solid fa-circle-check"></i>
+                                        <i class="fa-solid fa-circle-check">{{ $wisata->jenis_hubungan }} </i>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
+                        @endforeach
                     </table>
                 </div>
             </div>

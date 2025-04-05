@@ -9,6 +9,8 @@ use App\Http\Controllers\WisataDomestikController;
 use App\Http\Controllers\JamaahUmrahController;
 use App\Http\Controllers\JamaahHajiController;
 
+use App\Models\Transaksi;
+
 use App\Http\Controllers\TransaksiController;
 
 Route::get('/', function () {
@@ -24,10 +26,6 @@ Route::get('/portofolio', function () {
     return view('porto');
 });
 
-Route::get('/forgotpassword', function () {
-    return view('loginforgot');
-});
-
 // Rute Login
 Route::get('/login', function () {
     return view('login');
@@ -38,8 +36,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rute yang membutuhkan login
 Route::middleware(['auth'])->group(function () {
+
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        $dataTransaksi = Transaksi::all(); // Atau pakai orderBy jika ingin yang terbaru
+        return view('dashboard', compact('dataTransaksi'));
     })->name('dashboard');
 
     Route::get('/dashboard/{type?}', function ($type = null) {

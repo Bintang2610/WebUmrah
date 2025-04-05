@@ -1,7 +1,7 @@
 @props(['type', 'page', 'title'])
 
 <div class="w-dvh mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
-    
+
     <div class="flex items-center mb-4 justify-between">
         <!-- Header Dashboard -->
         <div class="px-2">
@@ -15,12 +15,12 @@
         <!-- Input Background -->
         <div class="bg-gray-100 py-4 pl-6 pr-11 rounded-tl-3xl flex items-center flex-grow"
             style="border-top-right-radius: 70px 40px;">
-            
+
             <!-- Wrapper Input -->
             <div class="relative w-full">
                 <!-- Icon Search -->
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                
+
                 <!-- Input -->
                 <input type="text" placeholder="Cari"
                     class="pl-12 pr-4 py-4 w-full h-[43px] border text-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -56,21 +56,21 @@
             @if ($type == 'datawl')
             <x-table-data></x-table-data>
             @elseif ($type == 'datawd')
-            <x-table-datawd></x-table-datawd>
+            <x-table-data></x-table-data>
             @elseif ($type == 'dataju')
-            <x-table-dataju></x-table-dataju>
+            <x-table-data></x-table-data>
             @elseif ($type == 'datajh')
-            <x-table-datajh></x-table-datajh>
+            <x-table-data></x-table-data>
             @endif
         @elseif ($page == 'transaction')
             @if ($type == 'datawl')
             <x-table-trcs></x-table-trcs>
             @elseif ($type == 'datawd')
-            <x-table-trcswd></x-table-trcswd>
+            <x-table-trcs></x-table-trcs>
             @elseif ($type == 'dataju')
-            <x-table-trcswd></x-table-trcswd>
+            <x-table-trcs></x-table-trcs>
             @elseif ($type == 'datajh')
-            <x-table-trcswd></x-table-trcswd>
+            <x-table-trcs></x-table-trcs>
             @endif
         @endif
         </div>

@@ -15,8 +15,8 @@
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
     <section class="container mx-auto px-4">
-        
-    @if (request()->is('dashboard/*/tambahdata')) 
+
+    @if (request()->is('dashboard/*/tambahdata'))
         <x-add-data></x-add-data>
     @elseif (request()->is('transaction/*/tambahdata'))
         <x-add-datatrcs></x-add-datatrcs>
