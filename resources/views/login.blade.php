@@ -48,14 +48,14 @@
                     <form class="space-y-4 md:space-y-4" action="{{ url('/login') }}" method="POST">
                         @csrf
                         <div>
-                            <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
-                            <input type="text" name="username" id="username" class="bg-white text-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Inputkan username" required>
+                            <label for="username" class="block mb-2 text-sm font-medium text-gray-900">Username</label>
+                            <input type="text" name="username" id="username" class="bg-white text-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Inputkan username" required>
                         </div>
 
                         <div>
-                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kata sandi</label>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Kata sandi</label>
                             <input type="password" name="password" id="password" placeholder="Inputkan kata sandi"
-                                   class="bg-white border border-gray-300 text-sm text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 pr-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   class="bg-white border border-gray-300 text-sm text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 pr-10"
                                    required>
                         </div>
 
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="flex justify-center">
-                            <button type="submit" class="text-white mt-2 mb-2 bg-gradient-to-b from-[#7CABCF] to-[#3285D8] hover:from-primary-600 hover:to-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-7 py-2.5 text-center dark:from-primary-600 dark:to-primary-800 dark:hover:from-primary-700 dark:hover:to-primary-900 dark:focus:ring-primary-800 shadow-[0px_5px_15px_rgba(0,0,0,0.3)]">
+                            <button type="submit" class="text-white mt-2 mb-2 bg-gradient-to-b from-[#7CABCF] to-[#3285D8] hover:from-primary-600 hover:to-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-7 py-2.5 text-center shadow-[0px_5px_15px_rgba(0,0,0,0.3)]">
                                 Masuk
                             </button>
                         </div>

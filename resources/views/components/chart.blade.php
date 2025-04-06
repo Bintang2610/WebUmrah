@@ -5,8 +5,9 @@
     $chartId = "chart-" . $type;
 @endphp
 
-<div class="w-full bg-white rounded-2xl shadow-sm dark:bg-gray-800 p-4 md:p-6">
-  <!-- Navbar -->
+<div class="w-full bg-[#EFF3F4] rounded-3xl shadow-sm p-8">
+  <div class="bg-white p-6 rounded-2xl">
+    <!-- Navbar -->
   <div class="flex items-center justify-between mb-6">
         <!-- Header Dashboard -->
         <div class="px-2">
@@ -33,4 +34,5 @@
     </div>
 
     <div class="chart" id="{{ $chartId }}" data-type="{{ $type }}"></div>
+  </div>
 </div>

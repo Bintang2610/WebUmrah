@@ -4,12 +4,12 @@
     <!-- Logo -->
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="{{ asset('/images/logobiru.png') }}" class="h-3" alt="Logo">
-      <span class="self-center text-lg text-[#27A1FF] font-semibold whitespace-nowrap dark:text-white">Elkhadijah</span>
+      <span class="self-center text-lg text-[#27A1FF] font-semibold whitespace-nowrap">Elkhadijah</span>
     </a>
 
     <!-- Menu Navigasi -->
     <div class="hidden md:flex md:w-auto mr-4 ml-auto" id="navbar-sticky">
-      <ul class="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg bg-gray-50 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg bg-gray-50 md:border-0 md:bg-white">
         <li>
           <x-navbarlink-wlcm href="/" :active="request()->is('/*')">Beranda</x-navbarlink-wlcm>
         </li>

@@ -1,28 +1,38 @@
 @props(['dataTransaksi'])
 
 
-<div class="w-dvh mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
+<div class="w-dvh my-8 px-6 py-10 bg-white text-white rounded-2xl">
     <!-- Navbar -->
-    <div class="flex items-center justify-between">
-        <!-- Header Dashboard -->
-        <div class="px-2">
-            <h2 class="text-xl font-medium text-black">Transaksi Terbaru</h2>
-        </div>
+    <div class="flex items-center justify-between w-full px-4">
+    <!-- Header Dashboard -->
+    <div>
+        <h2 class="text-2xl font-medium text-black">Transaksi Terbaru</h2>
     </div>
 
-    <div class="relative overflow-x-auto mt-4 mb-2 sm:rounded-lg">
-        <table class="w-full text-md font-semibold text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead class="text-md text-gray-700 dark:text-gray-400">
+    <!-- Button -->
+    <button class=" text-white bg-[#5CC1F3] hover:bg-blue-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 flex items-center gap-2">
+        <span class="selectedOption">Seluruh Data</span>
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+
+    <div class="relative overflow-x-auto mt-4 mb-2 sm:rounded-3xl p-6 bg-[#EFF3F4]">
+        <table class="w-full text-md font-semibold bg-white rounded-lg text-left rtl:text-right text-gray-500">
+            <thead class="text-md text-gray-700">
                 <tr class=" border-b">
                     <th scope="col" class="px-6 py-3"></th>
                     <th scope="col" class="px-6 py-3">
                         Nama
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Tanggal
+                        Tanggal setor
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Jumlah
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Bukti
                     </th>
                 </tr>
             </thead>
@@ -42,6 +52,11 @@
                         </td>
                         <td class="px-6 py-4 text-green-500">
                             Rp{{ number_format($transaksi->total_tagihan, 0, ',', '.') }}
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex justify-center rounded-md items-center bg-blue-200 text-blue-500">
+                                Lihat Bukti
+                            </div>
                         </td>
                     </tr>
                 @endforeach

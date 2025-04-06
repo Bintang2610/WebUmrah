@@ -9,18 +9,26 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="icon" type="image/png" href="{{ asset('logobiru.png') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         @vite('resources/css/app.css')
         @vite(['resources/js/app.js'])
     </head>
-    <section class="h-auto w-full">
+    
+    <section class="container mx-auto px-4">
 
-        <x-navbar-wlcm></x-navbar-wlcm>
+    <x-navbarwlcm>  </x-navbarwlcm>
 
-        <main class="container mx-auto py-4">
+
+    @php
+        $page = request()->segment(1) === 'dashboard' ? 'dashboard' : 'transaction';
+        $type = request()->segment(2) ?? 'datawl';
+    @endphp
+
+    <x-navbar :type="$type" :page="$page"></x-navbar>
+    
+    <main>
             @yield('content')  
-        </main>
-        
-        <x-footer-wlcm></x-footer-wlcm>
+    </main>
+
     </section>
 </html>

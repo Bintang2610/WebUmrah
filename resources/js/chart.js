@@ -3,10 +3,10 @@ import ApexCharts from 'apexcharts';
 document.addEventListener("DOMContentLoaded", function () {
     // Mapping tipe data ke pesan judul
     const titles = {
-        "datawl": "Data Peserta Wisata Luar Negeri",
-        "datajh": "Data Peserta Jamaah Haji",
-        "datawd": "Data Peserta Wisata Domestik",
-        "dataju": "Data Peserta Jamaah Umrah"
+        "datawl": "Peserta Wisata Luar Negeri",
+        "datajh": "Peserta Jamaah Haji",
+        "datawd": "Peserta Wisata Domestik",
+        "dataju": "Peserta Jamaah Umrah"
     };
 
     // Data berdasarkan filter dropdown

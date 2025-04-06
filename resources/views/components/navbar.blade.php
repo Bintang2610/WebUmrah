@@ -1,4 +1,4 @@
-<div class="w-dvh mx-8 my-8 px-6 py-10 bg-[#5CC1F3] text-white rounded-2xl">
+<div class="w-dvh mx-8 mb-8 mt-28 px-6 py-10 bg-[#5CC1F3] text-white rounded-2xl">
 
 <!-- Navbar -->
 

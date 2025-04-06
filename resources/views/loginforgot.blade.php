@@ -30,7 +30,7 @@
 
 
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <div class="w-full bg-white rounded-2xl shadow-[0_0_15px_2px_rgba(255,255,255,0.6)] dark:bg-gray-800 md:mt-0 sm:max-w-md xl:p-0">
+            <div class="w-full bg-white rounded-2xl shadow-[0_0_15px_2px_rgba(255,255,255,0.6)] md:mt-0 sm:max-w-md xl:p-0">
                 
             <div id="forgot-first">
                 <x-forgot-first></x-forgot-first>

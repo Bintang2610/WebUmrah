@@ -16,16 +16,16 @@
                     
 
                     <div>
-                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kata sandi</label>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Kata sandi</label>
                             <input type="password" name="password" id="password" placeholder="Masukkan kata sandi baru"
-                                   class="bg-white border border-gray-300 text-sm text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 pr-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   class="bg-white border border-gray-300 text-sm text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 pr-10"
                                    required>
                         </div>  
 
                     <div>
-                            <label for="newpassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konfirmasi Kata Sandi</label>
+                            <label for="newpassword" class="block mb-2 text-sm font-medium text-gray-900">Konfirmasi Kata Sandi</label>
                             <input type="newpassword" name="newpassword" id="password" placeholder="Konfirmasi kata sandi baru"
-                                class="bg-white border border-gray-300 text-sm text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 pr-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="bg-white border border-gray-300 text-sm text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 pr-10"
                                 required>
                         </div>
 

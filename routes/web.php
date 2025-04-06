@@ -33,6 +33,26 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('/dashboard/datawl', function () {
+    return view('datawl');
+});
+
+Route::get('/dashboard/datawd', function () {
+    return view('datawd');
+});
+
+Route::get('/dashboard/dataju', function () {
+    return view('dataju');
+});
+
+Route::get('/dashboard/datajh', function () {
+    return view('datajh');
+});
+
+Route::get('/forgotpassword', function () {
+    return view('loginforgot');
+});
+
 
 // Rute yang membutuhkan login
 Route::middleware(['auth'])->group(function () {

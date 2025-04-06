@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  class="bg-[#EFF3F4] dark:bg-gray-900">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,15 +16,32 @@
     </head>
     <section class="container mx-auto px-4">
 
+        <x-navbarwlcm>  </x-navbarwlcm>
+
         <x-navbar></x-navbar>
 
         <x-newtrcs :dataTransaksi="$dataTransaksi" />
 
-        <div class="max-w-screen-xl mx-8 my-8 rounded-2xl grid grid-cols-2 gap-4">
+        <div class="max-w-screen-xl mx-6 my-8 rounded-2xl">
+            <div class="flex items-center justify-between w-full px-4 py-4">
+                <!-- Header Dashboard -->
+                <div>
+                    <h2 class="text-2xl font-medium text-black">Data Peserta</h2>
+                </div>
+
+                <!-- Button -->
+                <button class=" text-white bg-[#5CC1F3] hover:bg-blue-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 flex items-center gap-2">
+                    <span class="selectedOption">Seluruh Data</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class=" grid grid-cols-2 gap-8">
             <x-chart type="datawl"></x-chart>
             <x-chart type="datajh"></x-chart>
             <x-chart type="datawd"></x-chart>
             <x-chart type="dataju"></x-chart>
+            </div>
         </div>
 
     </section>

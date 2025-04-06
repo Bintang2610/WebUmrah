@@ -14,12 +14,12 @@
 
                     <form class="space-y-4 md:space-y-4">
                         <div>
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                            <input type="text" name="email" id="email" class="bg-white text-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Inputkan username" required>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+                            <input type="text" name="email" id="email" class="bg-white text-sm border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Inputkan username" required>
                         </div>
 
                         <div class="flex justify-center">
-                            <button id="btn-masuk" type="submit" class="text-white mt-6 bg-gradient-to-b from-[#7CABCF] to-[#3285D8] hover:from-primary-600 hover:to-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-7 py-2.5 text-center dark:from-primary-600 dark:to-primary-800 dark:hover:from-primary-700 dark:hover:to-primary-900 dark:focus:ring-primary-800 shadow-[0px_5px_15px_rgba(0,0,0,0.3)]">
+                            <button id="btn-masuk" type="submit" class="text-white mt-6 bg-gradient-to-b from-[#7CABCF] to-[#3285D8] hover:from-primary-600 hover:to-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-7 py-2.5 text-center shadow-[0px_5px_15px_rgba(0,0,0,0.3)]">
                                 Masuk
                             </button>
                         </div>
