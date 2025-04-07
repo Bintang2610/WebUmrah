@@ -114,7 +114,7 @@
   <div class="flex justify-center items-center gap-4">
 
     <!-- Tombol Lihat -->
-    <a href="/ubahdata" class="text-blue-400 hover:text-blue-500">
+    <a href="/viewdataju" class="text-blue-400 hover:text-blue-500">
         <i class="fa-solid fa-eye"></i>
     </a>
 

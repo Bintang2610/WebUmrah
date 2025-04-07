@@ -89,6 +89,18 @@ Route::get('/viewdatawl', function () {
     return view('datawlview');
 });
 
+Route::get('/viewdatawd', function () {
+    return view('datawdview');
+});
+
+Route::get('/viewdataju', function () {
+    return view('datajuview');
+});
+
+Route::get('/viewdatajh', function () {
+    return view('datajhview');
+});
+
 Route::get('/transaction/datawl', function () {
     return view('trcswl');
 });

@@ -94,41 +94,6 @@
                 </div>
             </div>
         </div>
-        <div class="relative mx-2 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
-            <!-- Judul -->
-            <div class="text-left mb-6">
-                <h2 class="text-lg font-semibold">Paspor</h2>
-            </div>
-
-            <!-- Form -->
-            <div class="grid grid-cols-2 gap-6">
-                <!-- Kolom Kiri -->
-                <div>
-                    <!-- No. Paspor -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700">No. Paspor</label>
-                    <textarea name="no_paspor" required placeholder="No. Paspor"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">E6964983</textarea>
-
-                    <!-- Issuing office -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Issuing office</label>
-                    <textarea name="issuing_office" required placeholder="Issuing office"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Kantor Imigrasi Cilacap</textarea>
-                </div>
-
-                <!-- Kolom Kanan -->
-                <div>
-                    <!-- Date of issued -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-                    <input type="date" name="date_of_issued" required  value="2025-04-07"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
-
-                    <!-- Tanggal Lahir -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
-                    <input type="date" name="date_of_expiry" required  value="2025-04-07"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
-                </div>
-            </div>
-        </div>
         <div class="relative mx-2 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
             <!-- Judul -->
             <div class="text-left mb-6">

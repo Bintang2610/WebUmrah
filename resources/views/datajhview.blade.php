@@ -1,6 +1,6 @@
 @extends('layouts.adddata')
 
-@section('title', 'Dashboard - Tambah Data Wisata Luar Negeri')
+@section('title', 'Dashboard - Tambah Data Jamaah Haji')
 
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="flex mb-2 items-center justify-center">
             <!-- Header Dashboard -->
             <div class="px-2">
-                <h2 class="text-xl font-medium text-black">Data Peserta Wisata Luar Negeri</h2>
+                <h2 class="text-xl font-medium text-black">Data Peserta Jamaah Haji</h2>
             </div>
         </div>
 
