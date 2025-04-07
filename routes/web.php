@@ -65,6 +65,14 @@ Route::get('/tambahdatawd', function () {
     return view('datawdadd');
 });
 
+Route::get('/tambahdatatransaksi', function () {
+    return view('trcsadd');
+});
+
+Route::get('/viewdatawl', function () {
+    return view('datawlview');
+});
+
 Route::get('/transaction/datawl', function () {
     return view('trcswl');
 });
