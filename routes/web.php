@@ -49,6 +49,14 @@ Route::get('/dashboard/datajh', function () {
     return view('datajh');
 });
 
+Route::get('/tambahdatajh', function () {
+    return view('datajhadd');
+});
+
+Route::get('/transaction/datawl', function () {
+    return view('trcswl');
+});
+
 Route::get('/forgotpassword', function () {
     return view('loginforgot');
 });

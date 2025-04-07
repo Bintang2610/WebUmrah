@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Home - Data Wisata Luar Negeri')
+@section('title', 'Home - Transaksi Wisata Luar Negeri')
 
 
 @section('content')
@@ -11,7 +11,7 @@
     <div class="flex items-center mb-4 justify-between">
         <!-- Header Dashboard -->
         <div class="px-2">
-            <h2 class="text-xl font-medium text-black">Data Wisata Luar Negeri</h2>
+            <h2 class="text-xl font-medium text-black">Data Transaksi</h2>
         </div>
     </div>
 
@@ -71,13 +71,10 @@
                 Nama Jamaah
             </th>
             <th scope="col" class="px-6 py-3">
-                Tanggal daftar
+                Jumlah
             </th>
             <th scope="col" class="px-6 py-3">
-                Tanggal keberangkatan
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Tanggal kepulangan
+                Tanggal setor
             </th>
             <th scope="col" class="px-6 py-3">
                 Aksi
@@ -96,13 +93,8 @@
                 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                21-06-2023
-                </div>
-            </td>
-            <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                21-06-2024
+                <div class="flex justify-center items-center text-green-500">
+                Rp7.000.000
                 </div>
             </td>
             <td class="px-6 py-4 text-center">

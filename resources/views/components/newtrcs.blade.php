@@ -53,7 +53,7 @@
                         <td class="px-6 py-4 text-green-500">
                             Rp{{ number_format($transaksi->total_tagihan, 0, ',', '.') }}
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="px-4 py-4">
                             <div class="flex justify-center rounded-md items-center bg-blue-200 text-blue-500">
                                 Lihat Bukti
                             </div>

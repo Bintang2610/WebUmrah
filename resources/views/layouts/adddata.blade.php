@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"  class="bg-[#EFF3F4] dark:bg-gray-900">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>@yield('title', 'Default Title')</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -12,15 +12,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         @vite('resources/css/app.css')
         @vite(['resources/js/app.js'])
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     </head>
+    
     <section class="container mx-auto px-4">
 
-    @if (request()->is('dashboard/*/tambahdata'))
-        <x-add-data></x-add-data>
-    @elseif (request()->is('transaction/*/tambahdata'))
-        <x-add-datatrcs></x-add-datatrcs>
-    @endif
+    <x-navbarwlcm>  </x-navbarwlcm>
+
+    <a href="/dashboard" class="absolute top-20 left-8 text-lg flex items-center gap-2 text-black px-4 py-2 rounded-lg">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>Kembali</span>
+        </a>
+    
+    <main>
+            @yield('content')  
+    </main>
 
     </section>
 </html>

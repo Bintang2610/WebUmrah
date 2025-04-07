@@ -22,15 +22,6 @@
     <button id="profileButton" class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition ml-24">
         <i class="fa-regular fa-user"></i>
     </button>
-
-    <!-- Tombol Keluar -->
-    <form action="{{ route('logout') }}" method="POST" class="absolute left-2 top-2">
-        @csrf
-        <button type="submit" class="flex items-center space-x-1 bg-white text-red-500 px-4 py-2 text-sm rounded-full border border-red-500 transition">
-            <i class="fa-solid fa-sign-out-alt"></i>
-            <span>Keluar</span>
-        </button>
-    </form>
 </div>
 
     </div>
