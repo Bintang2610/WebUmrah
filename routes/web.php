@@ -53,6 +53,18 @@ Route::get('/tambahdatajh', function () {
     return view('datajhadd');
 });
 
+Route::get('/tambahdataju', function () {
+    return view('datajuadd');
+});
+
+Route::get('/tambahdatawl', function () {
+    return view('datawladd');
+});
+
+Route::get('/tambahdatawd', function () {
+    return view('datawdadd');
+});
+
 Route::get('/transaction/datawl', function () {
     return view('trcswl');
 });
