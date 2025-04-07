@@ -69,6 +69,18 @@ Route::get('/ubahdatawl', function () {
     return view('datawlchange');
 });
 
+Route::get('/ubahdatawd', function () {
+    return view('datawdchange');
+});
+
+Route::get('/ubahdataju', function () {
+    return view('datajuchange');
+});
+
+Route::get('/ubahdatajh', function () {
+    return view('datajhchange');
+});
+
 Route::get('/tambahdatatransaksi', function () {
     return view('trcsadd');
 });

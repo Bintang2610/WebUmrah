@@ -119,7 +119,7 @@
     </a>
 
     <!-- Tombol Edit -->
-    <a href="/ubahdata" class="text-yellow-500 hover:text-yellow-600">
+    <a href="/ubahdatajh" class="text-yellow-500 hover:text-yellow-600">
       <i class="fa-solid fa-pen-to-square text-lg"></i>
     </a>
 
