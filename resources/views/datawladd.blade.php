@@ -1,6 +1,6 @@
 @extends('layouts.adddata')
 
-@section('title', 'Dashboard - Tambah Data Jamaah Haji')
+@section('title', 'Dashboard - Tambah Data Wisata Luar Negeri')
 
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="flex items-center mb-8 justify-center">
             <!-- Header Dashboard -->
             <div class="px-2">
-                <h2 class="text-xl font-medium text-black"><span class="text-[#0ACC00]">Tambah Data</span> Peserta Jamaah Haji</h2>
+                <h2 class="text-xl font-medium text-black"><span class="text-[#0ACC00]">Tambah Data</span> Peserta Wisata  Luar Negeri</h2>
             </div>
         </div>
 
@@ -292,7 +292,7 @@
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Jenis perjalanan</label>
                     <textarea readonly name="no_paspor" required placeholder="No. Paspor"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Haji</textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Wisata Luar Negeri</textarea>
 
                     <!-- Biaya -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Biaya</label>

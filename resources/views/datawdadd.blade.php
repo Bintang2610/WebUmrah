@@ -1,6 +1,6 @@
 @extends('layouts.adddata')
 
-@section('title', 'Dashboard - Tambah Data Jamaah Haji')
+@section('title', 'Dashboard - Tambah Data Wisata Domestik')
 
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="flex items-center mb-8 justify-center">
             <!-- Header Dashboard -->
             <div class="px-2">
-                <h2 class="text-xl font-medium text-black"><span class="text-[#0ACC00]">Tambah Data</span> Peserta Jamaah Haji</h2>
+                <h2 class="text-xl font-medium text-black"><span class="text-[#0ACC00]">Tambah Data</span> Peserta Wisata Domestik</h2>
             </div>
         </div>
 
@@ -104,41 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="relative mx-2 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
-            <!-- Judul -->
-            <div class="text-left mb-6">
-                <h2 class="text-lg font-semibold">Paspor</h2>
-            </div>
-
-            <!-- Form -->
-            <div class="grid grid-cols-2 gap-6">
-                <!-- Kolom Kiri -->
-                <div>
-                    <!-- No. Paspor -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700">No. Paspor</label>
-                    <textarea name="no_paspor" required placeholder="No. Paspor"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
-
-                    <!-- Issuing office -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Issuing office</label>
-                    <textarea name="issuing_office" required placeholder="Issuing office"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
-                </div>
-
-                <!-- Kolom Kanan -->
-                <div>
-                    <!-- Date of issued -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-                    <input type="date" name="date_of_issued" required
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
-
-                    <!-- Tanggal Lahir -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
-                    <input type="date" name="date_of_expiry" required
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
-                </div>
-            </div>
-        </div>
+        
         <div class="relative mx-2 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
             <!-- Judul -->
             <div class="text-left mb-6">
@@ -292,7 +258,7 @@
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Jenis perjalanan</label>
                     <textarea readonly name="no_paspor" required placeholder="No. Paspor"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Haji</textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Wisata Domestik</textarea>
 
                     <!-- Biaya -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Biaya</label>

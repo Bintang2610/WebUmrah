@@ -33,6 +33,66 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('/dashboard/datawl', function () {
+    return view('datawl');
+});
+
+Route::get('/dashboard/datawd', function () {
+    return view('datawd');
+});
+
+Route::get('/dashboard/dataju', function () {
+    return view('dataju');
+});
+
+Route::get('/dashboard/datajh', function () {
+    return view('datajh');
+});
+
+Route::get('/tambahdatajh', function () {
+    return view('datajhadd');
+});
+
+Route::get('/tambahdataju', function () {
+    return view('datajuadd');
+});
+
+Route::get('/tambahdatawl', function () {
+    return view('datawladd');
+});
+
+Route::get('/tambahdatawd', function () {
+    return view('datawdadd');
+});
+
+Route::get('/tambahdatatransaksi', function () {
+    return view('trcsadd');
+});
+
+Route::get('/viewdatawl', function () {
+    return view('datawlview');
+});
+
+Route::get('/transaction/datawl', function () {
+    return view('trcswl');
+});
+
+Route::get('/transaction/datawd', function () {
+    return view('trcswd');
+});
+
+Route::get('/transaction/dataju', function () {
+    return view('trcsju');
+});
+
+Route::get('/transaction/datajh', function () {
+    return view('trcsjh');
+});
+
+Route::get('/forgotpassword', function () {
+    return view('loginforgot');
+});
+
 
 // Rute yang membutuhkan login
 Route::middleware(['auth'])->group(function () {
