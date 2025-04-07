@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Home - Transaksi Wisata Luar Negeri')
+@section('title', 'Transaksi - Transaksi Wisata Luar Negeri')
 
 
 @section('content')

@@ -1,14 +1,14 @@
 @extends('layouts.adddata')
 
-@section('title', 'Home - Tambah Data Jamaah Haji')
+@section('title', 'Dashboard - Tambah Data Jamaah Haji')
 
 
 @section('content')
 <div class="flex items-center justify-center  min-h-screen mb-8 mt-20">
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="" method="POST" enctype="multipart/form-data" class="w-full">
     @csrf
-    <div class="w-full max-w-7xl mt-8 mb-16 px-8 py-8 bg-white text-black rounded-2xl">
+    <div class="mt-8 mb-16 px-8 py-8 bg-white text-black rounded-2xl">
 
         <div class="flex items-center mb-8 justify-center">
             <!-- Header Dashboard -->
@@ -149,113 +149,64 @@
             <div class="mt-6">
                 <label class="block text-md mb-3 font-medium text-gray-700">Data</label>
                 <div class="overflow-x-auto mt-1 rounded-xl">
-                    <table
-                        class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-md text-gray-700 dark:text-gray-400">
-                            <tr class=" border-b">
-                                <th scope="col" class="px-10 py-8">
-                                    No
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Nama Peserta
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Sex
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    NIK/No. KTP
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Tempat Lahir
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Tanggal Lahir
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    No. Paspor
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Date of Issued
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Date of Expiry
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Issuing Office
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Hubungan
-                                </th>
-                            </tr>
-                        </thead>
+                <table
+    class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500">
+    <thead class="text-md text-gray-700">
+        <tr class=" border-b text-center">
+            <th scope="col" class="px-6 py-3">
+                No
+            </th>
+            <th scope="col" class="px-6 py-3">
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Nama Jamaah
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Jenis Kelamin
+            </th>
+            <th scope="col" class="px-6 py-3">
+                NIK/No. KTP
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Hubungan
+            </th>
+        </tr>
+    </thead>
 
-                        <tbody>
-                                    <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            <div class="flex justify-center items-center">
-                                                1
-                                            </div>
-                                        </th>
-                                        <td class="px-6 py-4">
-                                        <img src="/"
-                                        alt="Foto Peserta" class="w-16 h-16 rounded-full">
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefeff
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-center">
-                                            <div class="flex justify-center items-center">
-                                                fefefef
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 text-green-300 text-center">
-                                            <div class="flex justify-center items-center">
-                                                <i class="fa-solid fa-circle-check">fefefe </i>
-                                            </div>
-                                        </td>
-                                    </tr>
-                        </tbody>
-                    </table>
+    <tbody>
+        <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                    1
+                </div>
+            </td>
+            <td class="px-6 py-4">
+                <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                    Sukardi Santari
+                </div>
+            </td>
+            <td class="px-10 py-4 text-center">
+                <div class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
+                                Perempuan
+                            </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                3302000303010001
+                </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center gap-2 bg-red-200 text-red-500 py-2 px-4 rounded-md w-fit mx-auto">
+                    <span>Hubungan</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+        </table>
                 </div>
             </div>
 
@@ -273,124 +224,196 @@
                         class="pl-12 pr-4 py-4 w-[400px] h-[40px] border text-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="overflow-x-auto mt-1 rounded-xl">
-                    <table
-                        class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-md text-gray-700 dark:text-gray-400">
-                            <tr class=" border-b">
-                                <th scope="col" class="px-10 py-8"></th>
-                                <th scope="col" class="px-6 py-3">
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Nama Jamaah
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Sex
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    NIK/No. KTP
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Tempat Lahir
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Tanggal Lahir
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    No. Paspor
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Date of Issued
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Date of Expiry
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Issuing Office
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Hubungan
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                <th scope="row"
+                <table
+    class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500">
+    <thead class="text-md text-gray-700">
+        <tr class=" border-b text-center">
+            <th scope="col" class="px-6 py-3">
+                
+            </th>
+            <th scope="col" class="px-6 py-3">
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Nama Jamaah
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Jenis Kelamin
+            </th>
+            <th scope="col" class="px-6 py-3">
+                NIK/No. KTP
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
+            <th scope="row"
                                     class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     <div class="flex justify-center items-center">
                                         <input type="checkbox"
                                             class="w-5 h-5 rounded border-gray-300 text-green-500 focus:ring-green-500">
                                     </div>
                                 </th>
-                                <td class="px-6 py-4">
-                                <img src="/"
-                                alt="Foto Peserta" class="w-16 h-16 rounded-full">
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        fff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-center">
-                                    <div class="flex justify-center items-center">
-                                        ffff
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 text-green-300 text-center">
-                                    <div class="flex justify-center items-center">
-                                        <i class="fa-solid fa-circle-check">ffff </i>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <td class="px-6 py-4">
+                <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                    Sukardi Santari
+                </div>
+            </td>
+            <td class="px-10 py-4 text-center">
+                <div class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
+                                Perempuan
+                            </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                3302000303010001
+                </div>
+            </td>
+        </tr>
+    </tbody>
+        </table>
                 </div>
             </div>
         </div>
-        <div class="flex items-center my-12 justify-between">
 
-            <!-- Header Dashboard -->
-            <div>
-                <button type="submit">Simpan</button>
-                <a href="/dashboard"
-                    class="bg-green-500 text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
-                    Simpan
-                </a>
+        <div class="relative mx-2 mt-8 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
+            <!-- Judul -->
+            <div class="text-left mb-6">
+                <h2 class="text-lg font-semibold">Perjalanan</h2>
             </div>
+
+            <!-- Form -->
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Kolom Kiri -->
+                <div>
+                    <!-- No. Paspor -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700">Jenis perjalanan</label>
+                    <textarea readonly name="no_paspor" required placeholder="No. Paspor"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Haji</textarea>
+
+                    <!-- Biaya -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Biaya</label>
+                    <textarea name="issuing_office" required placeholder="Rp"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+
+                    <!-- Hotel -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Hotel</label>
+                    <textarea name="issuing_office" required placeholder="Hotel"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                </div>
+
+                <!-- Kolom Kanan -->
+                <div>
+                    <!-- Date of issued -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
+                    <input type="date" name="date_of_issued" required
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+
+                    <!-- Tanggal Lahir -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
+                    <input type="date" name="date_of_expiry" required
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+
+                    <!-- Transportasi -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-6">Transportasi</label>
+                    <textarea name="issuing_office" required placeholder="Transportasi"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                </div>
+            </div>
+
+            <div>
+            <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Kode khusus perjalanan</label>
+
+            <div class="flex gap-4 items-center">
+                <!-- Textarea -->
+                <textarea name="issuing_office" required placeholder="Kode khusus perjalanan"
+                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md resize-none"></textarea>
+
+                <!-- Tombol -->
+                <button type="button"
+                class="h-[50px] w-[130px] px-4 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition">
+                Buat Kode
+                </button>
+            </div>
+            </div>
+        
+        <!-- Kolom Kanan -->
+        <div>
+            <!-- Date of issued -->
+            <label class="block text-sm mt-4 mb-2 font-medium text-gray-700">Catatan</label>
+            <!-- Editor tampilan -->
+            <div class="relative w-full">
+  <!-- Textarea -->
+  <textarea id="catatan" placeholder="Catatan"
+    class="w-full h-[300px] bg-white text-sm px-2 py-1 border rounded-md resize-none pr-10">
+  </textarea>
+
+  <!-- Ikon gambar -->
+  <div id="uploadIcon" class="absolute bottom-2 left-2 text-gray-500 cursor-pointer">
+    <i class="fa-solid fa-image"></i>
+  </div>
+
+  <!-- Input file tersembunyi -->
+  <input type="file" id="fileInput" accept="image/*" class="hidden" />
+
+  <!-- Tempat preview gambar -->
+  <div id="previewContainer" class="mt-3">
+    <img id="previewImage" class="hidden max-w-xs rounded-md border" />
+  </div>
+</div>
+
+
+
+<!-- Input tersembunyi untuk dikirim ke backend -->
+<input type="hidden" name="issuing_office">
+
+        </div>
+        </div>
+
+        <div class="relative mx-2 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
+            <!-- Judul -->
+            <div class="text-left mb-6">
+                <h2 class="text-lg font-semibold">Akun</h2>
+            </div>
+
+            <!-- Form -->
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Kolom Kiri -->
+                <div>
+                    <!-- No. Paspor -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700">Username</label>
+                    <textarea name="no_paspor" required placeholder="Username"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+
+                    <!-- Issuing office -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Kata sandi</label>
+                    <textarea name="issuing_office" required placeholder="Kata sandi"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                </div>
+
+                <!-- Kolom Kanan -->
+                <div>
+                    <!-- No. Paspor -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700">No. Telepon</label>
+                    <textarea name="no_paspor" required placeholder="No. Telepon"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+
+                    <!-- Issuing office -->
+                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Email</label>
+                    <textarea name="issuing_office" required placeholder="Email@gmail.com"
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center my-12">
+        <button type="submit"
+                    class="w-full bg-green-500 text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
+                    Simpan
+                </button>
         </div>
     </div>
 </form>

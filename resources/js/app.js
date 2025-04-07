@@ -11,3 +11,4 @@ import "./carousel.js";
 import "./suratmodal.js";
 import "./forgotpswrd.js";
 import "./forgototp.js";
+import "./note.js";

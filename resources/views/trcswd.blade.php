@@ -1,17 +1,17 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Dashboard - Data Wisata Domestik')
+@section('title', 'Transaksi - Transaksi Wisata Domestik')
 
 
 @section('content')
 @props(['type', 'page'])
 
-<div class="w-dvh mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
+<div class="w-dvh mx-2 my-8 px-6 py-10 bg-white text-white rounded-2xl">
     
     <div class="flex items-center mb-4 justify-between">
         <!-- Header Dashboard -->
         <div class="px-2">
-            <h2 class="text-xl font-medium text-black">Data Wisata Domestik</h2>
+            <h2 class="text-xl font-medium text-black">Data Transaksi</h2>
         </div>
     </div>
 
@@ -56,7 +56,7 @@
     </div>
 
 
-    <div class="relative overflow-x-auto mx-0 mb-2 bg-gray-100 p-6 rounded-tr-xl rounded-br-xl rounded-bl-xl">
+    <div class="relative overflow-x-auto mb-2 bg-gray-100 p-6 rounded-tr-xl rounded-br-xl rounded-bl-xl">
         <div class="overflow-x-auto">
 
 
@@ -71,13 +71,10 @@
                 Nama Jamaah
             </th>
             <th scope="col" class="px-6 py-3">
-                Tanggal daftar
+                Jumlah
             </th>
             <th scope="col" class="px-6 py-3">
-                Tanggal keberangkatan
-            </th>
-            <th scope="col" class="px-6 py-3">
-                Tanggal kepulangan
+                Tanggal setor
             </th>
             <th scope="col" class="px-6 py-3">
                 Aksi
@@ -96,13 +93,8 @@
                 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                21-06-2023
-                </div>
-            </td>
-            <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                21-06-2024
+                <div class="flex justify-center items-center text-green-500">
+                Rp7.000.000
                 </div>
             </td>
             <td class="px-6 py-4 text-center">

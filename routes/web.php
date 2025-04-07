@@ -57,6 +57,18 @@ Route::get('/transaction/datawl', function () {
     return view('trcswl');
 });
 
+Route::get('/transaction/datawd', function () {
+    return view('trcswd');
+});
+
+Route::get('/transaction/dataju', function () {
+    return view('trcsju');
+});
+
+Route::get('/transaction/datajh', function () {
+    return view('trcsjh');
+});
+
 Route::get('/forgotpassword', function () {
     return view('loginforgot');
 });
