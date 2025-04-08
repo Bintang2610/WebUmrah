@@ -19,8 +19,8 @@
         <!-- Tombol di Kanan -->
         <div id="divButton" class="relative rounded-full p-2 flex items-center">
     <!-- Tombol Profil -->
-    <button id="profileButton" class="bg-transparent border border-white text-white px-3 py-2 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition ml-24">
-        <i class="fa-regular fa-user"></i>
+    <button id="profileButton" class="bg-transparent border border-white text-white px-3 py-2.5 text-sm rounded-full hover:bg-white hover:bg-opacity-20 transition ml-24">
+        <img src="/images/can.png" alt="">
     </button>
 </div>
 

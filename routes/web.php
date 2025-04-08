@@ -27,6 +27,10 @@ Route::get('/portofolio', function () {
     return view('porto');
 });
 
+Route::get('/viewprofil', function () {
+    return view('datauserview');
+});
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');
