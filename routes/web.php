@@ -68,6 +68,21 @@ Route::get('/tambahdatawd', function () {
     return view('datawdadd');
 });
 
+Route::get('/ubahdatawl', function () {
+    return view('datawlchange');
+});
+
+Route::get('/ubahdatawd', function () {
+    return view('datawdchange');
+});
+
+Route::get('/ubahdataju', function () {
+    return view('datajuchange');
+});
+
+Route::get('/ubahdatajh', function () {
+    return view('datajhchange');
+});
 
 Route::get('/tambahdatatransaksi', function () {
     return view('trcsadd');
@@ -75,6 +90,18 @@ Route::get('/tambahdatatransaksi', function () {
 
 Route::get('/viewdatawl', function () {
     return view('datawlview');
+});
+
+Route::get('/viewdatawd', function () {
+    return view('datawdview');
+});
+
+Route::get('/viewdataju', function () {
+    return view('datajuview');
+});
+
+Route::get('/viewdatajh', function () {
+    return view('datajhview');
 });
 
 Route::get('/transaction/datawl', function () {

@@ -104,7 +104,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="relative mx-2 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
             <!-- Judul -->
             <div class="text-left mb-6">
@@ -268,7 +268,7 @@
                     <!-- Hotel -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Hotel</label>
                     <textarea name="issuing_office" required placeholder="Hotel"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[100px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
                 </div>
 
                 <!-- Kolom Kanan -->
@@ -286,7 +286,7 @@
                     <!-- Transportasi -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-6">Transportasi</label>
                     <textarea name="issuing_office" required placeholder="Transportasi"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[100px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
                 </div>
             </div>
 

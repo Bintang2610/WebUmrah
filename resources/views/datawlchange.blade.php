@@ -1,6 +1,6 @@
 @extends('layouts.adddata')
 
-@section('title', 'Dashboard - Tambah Data Jamaah Haji')
+@section('title', 'Dashboard - Tambah Data Wisata Luar Negeri')
 
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="flex items-center mb-8 justify-center">
             <!-- Header Dashboard -->
             <div class="px-2">
-                <h2 class="text-xl font-medium text-black"><span class="text-[#0ACC00]">Tambah Data</span> Peserta Jamaah Haji</h2>
+                <h2 class="text-xl font-medium text-black"><span class="text-[#F1B900]">Ubah Data</span> Peserta Wisata Luar Negeri</h2>
             </div>
         </div>
 
@@ -30,20 +30,20 @@
                     <!-- Nama Jamaah -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Nama Peserta</label>
                     <textarea name="nama_peserta" required placeholder="Nama Peserta"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Faiz Al Fatih</textarea>
 
                     <!-- NIK/No. KTP -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">NIK/No. KTP</label>
-                    <textarea placeholder="NIK/No. KTP" name="nik" required class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                    <textarea placeholder="NIK/No. KTP" name="nik" required class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">0002001212000001</textarea>
 
                     <!-- Tempat Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tempat Lahir</label>
                     <textarea name="tempat_lahir" required placeholder="Tempat Lahir"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Banyumas</textarea>
 
                     <!-- Tanggal Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tanggal Lahir</label>
-                    <input name="tanggal_lahir" required type="date"
+                    <input name="tanggal_lahir" value="2025-04-07" required type="date"
                         class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
                 </div>
 
@@ -57,13 +57,8 @@
                             <label for="fileInput"
                                 class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
                                 <div id="previewContainer" class="flex flex-col items-center justify-center">
-                                    <i class="fa-regular fa-image text-3xl text-gray-400"></i>
-                                    <p class="mt-2 text-sm text-gray-400">
-                                        <i class="fa-solid fa-circle-exclamation mr-1"></i>
-                                        Seret dan lepas atau klik untuk pilih gambar
-                                    </p>
                                 </div>
-                                <img id="previewImage" class="hidden w-full h-full object-cover rounded-lg" />
+                                <img id="previewImage"  src="/images/foto.jpeg" class=" w-full h-full object-cover rounded-lg" />
                             </label>
                         </div>
                     </div>
@@ -76,13 +71,8 @@
                             <label for="fileInput2"
                                 class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
                                 <div id="previewContainer2" class="flex flex-col items-center justify-center">
-                                    <i class="fa-regular fa-image text-3xl text-gray-400"></i>
-                                    <p class="mt-2 text-sm text-gray-400">
-                                        <i class="fa-solid fa-circle-exclamation mr-1"></i>
-                                        Seret dan lepas atau klik untuk pilih gambar
-                                    </p>
                                 </div>
-                                <img id="previewImage2" class="hidden w-full h-full object-cover rounded-lg" />
+                                <img id="previewImage2" src="/images/foto.jpeg" class=" w-full h-full object-cover rounded-lg" />
                             </label>
                         </div>
                     </div>
@@ -94,7 +84,7 @@
                 <label class="block text-sm mb-3 font-medium text-gray-700">Jenis Kelamin</label>
                 <div class="flex items-center text-sm gap-x-4 space-x-4 mt-2">
                     <label class="flex items-center">
-                        <input type="radio" name="jenis_kelamin" value="L" required class="mr-2">
+                        <input type="radio" name="jenis_kelamin" value="L" checked required class="mr-2">
                         Laki-laki (L)
                     </label>
                     <label class="flex items-center">
@@ -117,24 +107,24 @@
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">No. Paspor</label>
                     <textarea name="no_paspor" required placeholder="No. Paspor"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">E6964983</textarea>
 
                     <!-- Issuing office -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Issuing office</label>
                     <textarea name="issuing_office" required placeholder="Issuing office"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Kantor Imigrasi Cilacap</textarea>
                 </div>
 
                 <!-- Kolom Kanan -->
                 <div>
                     <!-- Date of issued -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-                    <input type="date" name="date_of_issued" required
+                    <input type="date" name="date_of_issued" required  value="2025-04-07"
                         class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
 
                     <!-- Tanggal Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
-                    <input type="date" name="date_of_expiry" required
+                    <input type="date" name="date_of_expiry" required  value="2025-04-07"
                         class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
                 </div>
             </div>
@@ -292,35 +282,43 @@
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Jenis perjalanan</label>
                     <textarea readonly name="no_paspor" required placeholder="No. Paspor"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Haji</textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Wisata Luar Negeri</textarea>
 
                     <!-- Biaya -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Biaya</label>
                     <textarea name="issuing_office" required placeholder="Rp"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Rp350.000.000</textarea>
 
                     <!-- Hotel -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Hotel</label>
                     <textarea name="issuing_office" required placeholder="Hotel"
-                        class="w-full h-[100px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[100px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Madinah:
+Dallah Taibah
+Mekkah:
+Pullman Zamzam
+Apartemen Transit</textarea>
                 </div>
 
                 <!-- Kolom Kanan -->
                 <div>
                     <!-- Date of issued -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Date of issued</label>
-                    <input type="date" name="date_of_issued" required
+                    <input type="date" name="date_of_issued" required  value="2025-04-07"
                         class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
 
                     <!-- Tanggal Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-5">Date of expiry</label>
-                    <input type="date" name="date_of_expiry" required
+                    <input type="date" name="date_of_expiry" required  value="2025-04-07"
                         class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
 
                     <!-- Transportasi -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-6">Transportasi</label>
                     <textarea name="issuing_office" required placeholder="Transportasi"
-                        class="w-full h-[100px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[100px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Pesawat:
+Saudia
+Garuda
+Qatar
+Etihad</textarea>
                 </div>
             </div>
 
@@ -329,8 +327,8 @@
 
             <div class="flex gap-4 items-center">
                 <!-- Textarea -->
-                <textarea name="issuing_office" required placeholder="Kode khusus perjalanan"
-                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md resize-none"></textarea>
+                <textarea name="issuing_office" required placeholder="Kode khusus perjalanan" readonly
+                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md resize-none">3911205</textarea>
 
                 <!-- Tombol -->
                 <button type="button"
@@ -348,12 +346,12 @@
             <div class="relative w-full">
   <!-- Textarea -->
   <textarea id="noteArea" placeholder="Catatan"
-    class="w-full h-[300px] bg-white text-sm px-2 py-1 border rounded-md resize-none pr-10">
+    class="hidden w-full h-[300px] bg-white text-sm px-2 py-1 border rounded-md resize-none pr-10">
   </textarea>
 
   <!-- Gambar Preview (disembunyikan dulu) -->
-  <div id="imagePreviewContainer" class="hidden bg-white w-full h-[300px] border items-center py-4 pl-8 rounded-md overflow-hidden flex justify-left">
-  <img id="imagePreview" class="w-auto h-full object-contain" />
+  <div id="imagePreviewContainer" class=" bg-white w-full h-[300px] border items-center py-4 pl-8 rounded-md overflow-hidden flex justify-left">
+  <img id="imagePreview" src="/images/foto.jpeg" class="w-auto h-full object-contain" />
 </div>
 
   <!-- Ikon Gambar di kiri bawah -->
@@ -383,12 +381,12 @@
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Username</label>
                     <textarea name="no_paspor" required placeholder="Username"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Faiz Al Fatih</textarea>
 
                     <!-- Issuing office -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Kata sandi</label>
                     <textarea name="issuing_office" required placeholder="Kata sandi"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">#FaizAlFatih2493</textarea>
                 </div>
 
                 <!-- Kolom Kanan -->
@@ -396,12 +394,12 @@
                     <!-- No. Paspor -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">No. Telepon</label>
                     <textarea name="no_paspor" required placeholder="No. Telepon"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">085321769853</textarea>
 
                     <!-- Issuing office -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Email</label>
                     <textarea name="issuing_office" required placeholder="Email@gmail.com"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">faizalfth@gmail.com</textarea>
                 </div>
             </div>
         </div>

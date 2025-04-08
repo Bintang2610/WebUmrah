@@ -6,7 +6,7 @@
 @section('content')
 @props(['type', 'page'])
 
-<div class="w-dvh mx-8 my-8 px-6 py-10 bg-white text-white rounded-2xl">
+<div class="w-dvh mx-2 my-8 px-6 py-10 bg-white text-white rounded-2xl">
     
     <div class="flex items-center mb-4 justify-between">
         <!-- Header Dashboard -->
@@ -114,12 +114,12 @@
   <div class="flex justify-center items-center gap-4">
 
     <!-- Tombol Lihat -->
-    <a href="/ubahdata" class="text-blue-400 hover:text-blue-500">
+    <a href="/viewdatajh" class="text-blue-400 hover:text-blue-500">
         <i class="fa-solid fa-eye"></i>
     </a>
 
     <!-- Tombol Edit -->
-    <a href="/ubahdata" class="text-yellow-500 hover:text-yellow-600">
+    <a href="/ubahdatajh" class="text-yellow-500 hover:text-yellow-600">
       <i class="fa-solid fa-pen-to-square text-lg"></i>
     </a>
 
