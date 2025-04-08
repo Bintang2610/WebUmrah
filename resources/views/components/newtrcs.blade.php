@@ -40,7 +40,7 @@
                 @foreach ($dataTransaksi as $transaksi)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
+                            <img src="{{ asset('storage/' . $transaksi->foto_bukti_transaksi) }}" alt="Foto" class="w-10 h-10 rounded-full">
                             {{-- Atau kalau mau pakai foto asli dari database --}}
                             {{-- <img src="{{ asset('storage/' . $transaksi->foto_bukti_transaksi) }}" alt="Foto" class="w-10 h-10 rounded-full"> --}}
                         </th>

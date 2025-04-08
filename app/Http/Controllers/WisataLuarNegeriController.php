@@ -4,35 +4,74 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\WisataLuarNegeri;
+use Illuminate\Support\Facades\Hash;
+
 
 class WisataLuarNegeriController extends Controller
 {
     public function index()
     {
-        $dataWisata = WisataLuarNegeri::all();
-        dd($dataWisata);
-        return view('dashboard.add-data', compact('dataWisata'));
+        $wisataluarnegeri = WisataLuarNegeri::all();
+        return view('wisata-luar-negeri.index', compact('wisataluarnegeri'));
     }
+
+    public function create()
+    {
+        // Ambil semua data peserta wisata luar negeri untuk ditampilkan sebagai "data hubungan"
+        $wisataluarnegeri = WisataLuarNegeri::all();
+
+        // Kirim ke view
+        return view('wisata.create', compact('wisataluarnegeri'));
+    }
+
+
 
     public function store(Request $request)
     {
         $request->validate([
             'nama_peserta' => 'required|string|max:255',
-            'nik' => 'required|string|max:20|unique:wisata_luar_negeri,nik',
-            'tempat_lahir' => 'required|string|max:100',
+            'nik' => 'required|string|max:255',
+            'tempat_lahir' => 'required|string|max:255',
             'tanggal_lahir' => 'required|date',
             'jenis_kelamin' => 'required|in:L,P',
-            'foto_peserta' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'no_paspor' => 'required|string|max:50|unique:wisata_luar_negeri,no_paspor',
-            'issuing_office' => 'required|string|max:100',
+
+            'foto_peserta' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'foto_ktp' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+
+            'no_paspor' => 'required|string|max:255',
+            'issuing_office' => 'required|string|max:255',
             'date_of_issued' => 'required|date',
             'date_of_expiry' => 'required|date',
-            'jenis_hubungan' => 'required|in:Keluarga,Suami-istri',
+
+            'jenis_perjalanan' => 'required|string',
+            'biaya' => 'required|string',
+            'hotel' => 'required|string',
+            'date_of_issued_perjalanan' => 'required|date',
+            'date_of_expiry_perjalanan' => 'required|date',
+            'transportasi' => 'required|string',
+            'kode_khusus_perjalanan' => 'required|string',
+
+            'catatan' => 'required|string',
+            'foto_catatan' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+
+            'username' => 'required|string|max:255',
+            'password' => 'required|string',
+            'no_telepon' => 'required|string|max:20',
+            'email' => 'required|email|max:255',
         ]);
+
 
         // Upload foto
         if ($request->hasFile('foto_peserta')) {
             $fotoPath = $request->file('foto_peserta')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('foto_ktp')) {
+            $fotoKtpPath = $request->file('foto_ktp')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('foto_catatan')) {
+            $fotoCatatanPath = $request->file('foto_catatan')->store('uploads', 'public');
         }
 
         WisataLuarNegeri::create([
@@ -42,12 +81,29 @@ class WisataLuarNegeriController extends Controller
             'tanggal_lahir' => $request->tanggal_lahir,
             'jenis_kelamin' => $request->jenis_kelamin,
             'foto_peserta' => $fotoPath,
+            'foto_ktp' => $fotoKtpPath,
+
             'no_paspor' => $request->no_paspor,
             'issuing_office' => $request->issuing_office,
             'date_of_issued' => $request->date_of_issued,
             'date_of_expiry' => $request->date_of_expiry,
-            'jenis_hubungan' => $request->jenis_hubungan,
-        ]);
+
+            'jenis_perjalanan' => $request->jenis_perjalanan,
+            'biaya' => $request->biaya,
+            'hotel' => $request->hotel,
+            'date_of_issued_perjalanan' => $request->date_of_issued_perjalanan,
+            'date_of_expiry_perjalanan' => $request->date_of_expiry_perjalanan,
+            'transportasi' => $request->transportasi,
+            'kode_khusus_perjalanan' => $request->kode_khusus_perjalanan,
+
+            'catatan' => $request->catatan,
+            'foto_catatan' => $fotoCatatanPath,
+
+            'username' => $request->username,
+            'password' => bcrypt($request->password), // jangan lupa encrypt
+            'no_telepon' => $request->no_telepon,
+            'email' => $request->email,
+]);
 
         return redirect()->back()->with('success', 'Data berhasil disimpan.');
     }
