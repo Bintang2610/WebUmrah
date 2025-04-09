@@ -52,29 +52,25 @@
                     <!-- Foto Diri -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-1">Foto Diri</label>
                     <div class="w-full bg-white rounded-lg p-2 text-center relative">
-                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-2">
                             <input name="foto_peserta" required type="file" id="fileInput" class="hidden">
                             <label for="fileInput"
-                                class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
+                                class="cursor-pointer flex flex-col items-center justify-center w-full h-[138px]">
                                 <div id="previewContainer" class="flex flex-col items-center justify-center">
                                 </div>
                                 <img id="previewImage"  src="/images/foto.jpeg" class=" w-full h-full object-cover rounded-lg" />
                             </label>
-                        </div>
                     </div>
 
                     <!-- Foto Ktp -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-6">Foto KTP</label>
                     <div class="w-full bg-white rounded-lg p-2 text-center relative">
-                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-2">
                             <input name="foto_peserta" required type="file" id="fileInput2" class="hidden">
                             <label for="fileInput2"
-                                class="cursor-pointer flex flex-col items-center justify-center w-full h-[120px]">
+                                class="cursor-pointer flex flex-col items-center justify-center w-full h-[140px]">
                                 <div id="previewContainer2" class="flex flex-col items-center justify-center">
                                 </div>
                                 <img id="previewImage2" src="/images/foto.jpeg" class=" w-full h-full object-cover rounded-lg" />
                             </label>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -236,7 +232,7 @@
     </thead>
 
     <tbody>
-        <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
+        <tr class="bg-white hover:bg-gray-50 text-black text-center">
             <th scope="row"
                                     class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     <div class="flex justify-center items-center">
@@ -346,7 +342,7 @@ Etihad</textarea>
             <div class="relative w-full">
   <!-- Textarea -->
   <textarea id="noteArea" placeholder="Catatan"
-    class="hidden w-full h-[300px] bg-white text-sm px-2 py-1 border rounded-md resize-none pr-10">
+    class="w-full h-[300px] bg-white text-sm px-2 py-1 border rounded-md resize-none pr-10">ddd
   </textarea>
 
   <!-- Gambar Preview (disembunyikan dulu) -->
@@ -406,7 +402,7 @@ Etihad</textarea>
 
         <div class="flex items-center my-12">
         <button type="submit"
-                    class="w-full bg-green-500 text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
+                    class="w-full bg-[#F1B900] text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
                     Simpan
                 </button>
         </div>

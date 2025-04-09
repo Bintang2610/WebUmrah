@@ -197,7 +197,7 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <a href="/viewtrip" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
+                <a href="/viewusertrip" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
                 Lihat data
                 </a>
             </td>

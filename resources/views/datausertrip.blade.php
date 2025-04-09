@@ -206,12 +206,12 @@
                 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <div href="/viewtrip" class="flex justify-center items-center gap-2 bg-red-200 text-red-500 py-2 px-4 rounded-md w-fit mx-auto">
+                <div class="flex justify-center items-center gap-2 bg-red-200 text-red-500 py-2 px-4 rounded-md w-fit mx-auto">
                 Belum lunas
 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <a href="/viewtransaction" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
+                <a href="/viewusertransaction" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
                 Lihat data
                 </a>
             </td>

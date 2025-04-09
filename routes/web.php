@@ -27,16 +27,32 @@ Route::get('/portofolio', function () {
     return view('porto');
 });
 
-Route::get('/viewprofil', function () {
+Route::get('/viewuserprofil', function () {
     return view('datauserview');
 });
 
-Route::get('/viewtrip', function () {
+Route::get('/viewusertrip', function () {
     return view('datausertrip');
 });
 
-Route::get('/viewtransaction', function () {
+Route::get('/viewusertransaction', function () {
     return view('datausertrcs');
+});
+
+Route::get('/viewtransactionwl', function () {
+    return view('trcswlview');
+});
+
+Route::get('/viewtransactionwd', function () {
+    return view('trcswdview');
+});
+
+Route::get('/viewtransactionju', function () {
+    return view('trcsjuview');
+});
+
+Route::get('/viewtransactionjh', function () {
+    return view('trcsjhview');
 });
 
 // Rute Login
