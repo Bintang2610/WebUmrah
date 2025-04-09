@@ -194,7 +194,7 @@
 
                         <div class="flex gap-4 items-center">
                             <!-- Textarea -->
-                            <textarea id="kodeKhusus" name="kode_khusus_perjalanan" required placeholder="Kode khusus perjalanan"
+                            <textarea id="kodeKhusus" readonly name="kode_khusus_perjalanan" required placeholder="Kode khusus perjalanan"
                                 class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md resize-none"></textarea>
 
                             <!-- Tombol -->

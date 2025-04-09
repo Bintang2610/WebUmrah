@@ -96,7 +96,6 @@
                                 <input type="radio" name="jenis_kelamin" value="P" required class="mr-2">
                                 Perempuan (P)
                             </label>
-                        </div>
                     </div>
                 </div>
                 <div class="relative mx-2 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
@@ -271,4 +270,13 @@
             </div>
         </form>
 
-    @endsection
+        <div class="flex items-center my-12">
+        <button type="submit"
+                    class="w-full bg-[#F1B900] text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
+                    Simpan
+                </button>
+        </div>
+    </div>
+</form>
+
+@endsection

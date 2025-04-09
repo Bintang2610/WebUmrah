@@ -30,7 +30,7 @@
       <!-- Tombol Login -->
       <a href="/login" class="text-black bg-white border border-black hover:bg-gray-50 font-medium rounded-md text-sm px-6 py-2 text-center">Masuk</a>
 
-      <a href="/viewprofil" class="text-center">
+      <a href="/viewuserprofil" class="text-center">
         <img src="/logobiru.png" alt="" class="w-8">
       </a>
 

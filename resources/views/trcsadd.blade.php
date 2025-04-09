@@ -54,8 +54,15 @@
 
                     <!-- Tanggal Lahir -->
                     <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Jenis Perjalanan</label>
-                    <textarea name="nama_peserta" required placeholder="Jenis Perjalanan"
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></textarea>
+                    <select name="nama_peserta" required
+  class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1">
+  <option value="" disabled selected hidden>Jenis Perjalanan</option>
+  <option value="Ali">Haji</option>
+  <option value="Budi">Umrah</option>
+  <option value="Citra">Wisata Luar Negeri</option>
+  <option value="Citra">Wisata Domestik</option>
+  <!-- Tambahkan opsi lain di sini -->
+</select>
                 </div>
 
                 <!-- Kolom Kanan -->

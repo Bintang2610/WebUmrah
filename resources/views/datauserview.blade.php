@@ -154,18 +154,19 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 No
             </th>
             <th scope="col" class="px-6 py-3">
+            Jenis dan kode perjalanan
             </th>
             <th scope="col" class="px-6 py-3">
-                Nama Jamaah
+            Tanggal daftar
             </th>
             <th scope="col" class="px-6 py-3">
-                Jenis Kelamin
+            Perkiraan keberangkatan
             </th>
             <th scope="col" class="px-6 py-3">
-                NIK/No. KTP
+            Perkiraan kepulangan
             </th>
             <th scope="col" class="px-6 py-3">
-                Hubungan
+            Aksi
             </th>
         </tr>
     </thead>
@@ -177,68 +178,32 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                     1
                 </div>
             </td>
-            <td class="px-6 py-4">
-                <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
+            <td class="px-6 py-4 text-center">
+            Haji (3911205)
             </td>
             <td class="px-6 py-4 text-center">
                 <div class="flex justify-center items-center">
-                    Sukardi Santari
+                12-05-2023
                 </div>
             </td>
             <td class="px-10 py-4 text-center">
-                <div class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
-                                Perempuan
-                            </div>
+                <div class="flex justify-center items-center">
+                12-05-2023
+                </div>
             </td>
             <td class="px-6 py-4 text-center">
                 <div class="flex justify-center items-center">
-                3302000303010001
+                12-05-2023
                 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center gap-2 bg-green-200 text-green-500 py-2 px-4 rounded-md w-fit mx-auto">
-                Suami - Istri
-                </div>
+                <a href="/viewusertrip" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
+                Lihat data
+                </a>
             </td>
         </tr>
     </tbody>
         </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="relative mx-2 mt-8 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
-            <!-- Judul -->
-            <div class="text-left mb-6">
-                <h2 class="text-lg font-semibold">Akun</h2>
-            </div>
-
-            <!-- Form -->
-            <div class="grid grid-cols-2 gap-6">
-                <!-- Kolom Kiri -->
-                <div>
-                    <!-- No. Paspor -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700">Username</label>
-                    <textarea name="no_paspor" required placeholder="Username" readonly
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Faiz Al Fatih</textarea>
-
-                    <!-- Issuing office -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Kata sandi</label>
-                    <textarea name="issuing_office" required placeholder="Kata sandi" readonly
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">#FaizAlFatih2493</textarea>
-                </div>
-
-                <!-- Kolom Kanan -->
-                <div>
-                    <!-- No. Paspor -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700">No. Telepon</label>
-                    <textarea name="no_paspor" required placeholder="No. Telepon" readonly
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">085321769853</textarea>
-
-                    <!-- Issuing office -->
-                    <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Email</label>
-                    <textarea name="issuing_office" required placeholder="Email@gmail.com" readonly
-                        class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">faizalfth@gmail.com</textarea>
                 </div>
             </div>
         </div>
