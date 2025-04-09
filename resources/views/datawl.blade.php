@@ -3,8 +3,9 @@
 @section('title', 'Home - Data Wisata Luar Negeri')
 
 
+
 @section('content')
-    @props(['type', 'page'])
+    @props(['type', 'page', 'dataWLN'])
 
     <div class="w-dvh mx-2 my-8 px-6 py-10 bg-white text-white rounded-2xl">
 
@@ -89,13 +90,14 @@
                     </thead>
 
                     <tbody>
+                        @foreach ($dataWLN as $wisataluarnegeri)
                         <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
                             <td class="px-6 py-4">
-                                <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto" class="w-10 h-10 rounded-full">
+                                <img src="{{ asset('storage/' . $wisataluarnegeri->foto_peserta) }}" alt="Foto" class="w-10 h-10 rounded-full">
                             </td>
                             <td class="px-6 py-4 text-center">
                                 <div class="flex justify-center items-center">
-                                    Sukardi Santari
+                                    {{ $wisataluarnegeri->nama_peserta }}
                                 </div>
                             </td>
                             <td class="px-6 py-4 text-center">
@@ -105,12 +107,12 @@
                             </td>
                             <td class="px-6 py-4 text-center">
                                 <div class="flex justify-center items-center">
-                                    21-06-2024
+                                    {{ $wisataluarnegeri->date_of_issued_perjalanan }}
                                 </div>
                             </td>
                             <td class="px-6 py-4 text-center">
                                 <div class="flex justify-center items-center">
-                                    30-06-2024
+                                    {{ $wisataluarnegeri->date_of_expiry_perjalanan }}
                                 </div>
                             </td>
                             <td class="px-6 py-4 text-center">
@@ -135,6 +137,7 @@
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
 

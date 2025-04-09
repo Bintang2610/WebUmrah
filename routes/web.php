@@ -137,13 +137,10 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard', compact('dataTransaksi'));
     })->name('dashboard');
 
-    Route::get('/dashboard/{type?}', function ($type = null) {
-        return view($type ? 'dashboard-data' : 'dashboard', compact('type'));
-    })->name('dashboard');
-
 
     Route::get('/dashboard/datawl', function () {
-        return view('datawl');
+        $dataWLN = WisataLuarNegeri::all();
+        return view('datawl', compact('dataWLN'));
     });
 
     Route::get('/dashboard/datawd', function () {
@@ -182,7 +179,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/viewdatawl', function () {
-        return view('datawlview');
+        $dataWLN = WisataLuarNegeri::all();
+        return view('datawlview', compact('dataWLN'));
     });
 
     Route::get('/transaction/datawl', function () {
