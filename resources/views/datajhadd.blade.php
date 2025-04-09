@@ -202,7 +202,7 @@
                 </button>
             </div>
             </div>
-        
+
         <!-- Kolom Kanan -->
         <div>
             <!-- Date of issued -->

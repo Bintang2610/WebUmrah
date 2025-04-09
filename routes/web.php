@@ -168,7 +168,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/tambahdatawl', function () {
-        return view('datawladd');
+        $dataWLN = WisataLuarNegeri::all();
+        return view('datawladd', compact('dataWLN'));
     });
 
     Route::get('/tambahdatawd', function () {

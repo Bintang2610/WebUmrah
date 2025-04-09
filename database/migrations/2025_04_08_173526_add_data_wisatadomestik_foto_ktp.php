@@ -7,15 +7,18 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        Schema::table('wisata_luar_negeri', function (Blueprint $table) {
-            $table->dropColumn('nama_pengguna');
+        Schema::table('wisata_domestik', function (Blueprint $table) {
+            $table->string('foto_ktp');
         });
     }
 
     public function down(): void
     {
-        Schema::table('wisata_luar_negeri', function (Blueprint $table) {
-            $table->string('nama_pengguna', 40); // atau sesuaikan posisi
+        Schema::table('wisata_domestik', function (Blueprint $table) {
+            $table->dropColumn([
+                 'foto_ktp'
+            ]);
         });
     }
 };
+
