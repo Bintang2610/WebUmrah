@@ -76,9 +76,10 @@ Route::get('/ubahdatawl', function () {
     return view('datawlchange');
 });
 
-Route::get('/ubahdatawd', function () {
-    return view('datawdchange');
+Route::get('/ubahdatawl', function () {
+    return view('datawlchange');
 });
+
 
 Route::get('/ubahdataju', function () {
     return view('datajuchange');
@@ -207,6 +208,13 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/wisata-luar-negeri/store', [WisataLuarNegeriController::class, 'store'])->name('wisata.store');
     Route::get('/wisata-luar-negeri', [TransaksiController::class, 'index'])->name('wisata-luar-negeri.index');
     Route::get('/wisata/create', [WisataLuarNegeri::class, 'create'])->name('wisata.create');
+    Route::get('/viewdatawl/{id}', [WisataLuarNegeriController::class, 'show'])->name('datawl.view');
+    Route::get('/datawl/{id}/edit', [WisataLuarNegeriController::class, 'edit'])->name('wisataluarnegeri.edit');
+    Route::put('/ubahdatawl/update/{id}', [WisataLuarNegeriController::class, 'update'])->name('wisataluarnegeri.update');
+    
+
+
+
 
     //Domestik
     Route::post('/wisata-domestik/store', [WisataDomestikController::class, 'store'])->name('domestik.store');

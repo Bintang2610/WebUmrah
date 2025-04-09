@@ -120,12 +120,13 @@
                                 <div class="flex justify-center items-center gap-4">
 
                                     <!-- Tombol Lihat -->
-                                    <a href="/viewdatawl" class="text-blue-400 hover:text-blue-500">
+                                    <a href="{{ route('datawl.view', $wisataluarnegeri->id) }}" class="text-blue-400 hover:text-blue-500">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
 
+
                                     <!-- Tombol Edit -->
-                                    <a href="/ubahdatawl" class="text-yellow-500 hover:text-yellow-600">
+                                    <a href="{{ route('wisataluarnegeri.edit', $wisataluarnegeri->id) }}" class="text-yellow-500 hover:text-yellow-600">
                                         <i class="fa-solid fa-pen-to-square text-lg"></i>
                                     </a>
 

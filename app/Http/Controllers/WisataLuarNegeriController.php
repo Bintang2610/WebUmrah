@@ -19,12 +19,15 @@ class WisataLuarNegeriController extends Controller
     {
         // Ambil semua data peserta wisata luar negeri untuk ditampilkan sebagai "data hubungan"
         $wisataluarnegeri = WisataLuarNegeri::all();
-
         // Kirim ke view
         return view('wisata.create', compact('wisataluarnegeri'));
     }
 
-
+    public function show($id)
+    {
+        $data = WisataLuarNegeri::where('id', $id)->get(); // tetap pakai get() agar bisa foreach, atau pakai ->first() kalau hanya satu
+        return view('datawlview', ['dataWLN' => $data]);
+    }
 
     public function store(Request $request)
     {
@@ -104,7 +107,97 @@ class WisataLuarNegeriController extends Controller
             'no_telepon' => $request->no_telepon,
             'email' => $request->email,
 ]);
-
         return redirect()->back()->with('success', 'Data berhasil disimpan.');
     }
+
+
+    public function edit($id)
+    {
+        $peserta = WisataLuarNegeri::findOrFail($id);
+        return view('datawlchange', compact('peserta'));
+    }
+
+        public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nama_peserta' => 'required|string|max:255',
+            'nik' => 'required|string|max:255',
+            'tempat_lahir' => 'required|string|max:255',
+            'tanggal_lahir' => 'required|date',
+            'jenis_kelamin' => 'required|in:L,P',
+
+            'foto_peserta' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'foto_ktp' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+
+            'no_paspor' => 'required|string|max:255',
+            'issuing_office' => 'required|string|max:255',
+            'date_of_issued' => 'required|date',
+            'date_of_expiry' => 'required|date',
+
+            'jenis_perjalanan' => 'required|string',
+            'biaya' => 'required|string',
+            'hotel' => 'required|string',
+            'date_of_issued_perjalanan' => 'required|date',
+            'date_of_expiry_perjalanan' => 'required|date',
+            'transportasi' => 'required|string',
+            'kode_khusus_perjalanan' => 'required|string',
+
+            'catatan' => 'required|string',
+            'foto_catatan' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+
+            'username' => 'required|string|max:255',
+            'password' => 'nullable|string', // password opsional saat edit
+            'no_telepon' => 'required|string|max:20',
+            'email' => 'required|email|max:255',
+        ]);
+
+        $peserta = WisataLuarNegeri::findOrFail($id);
+
+        // Upload ulang file jika ada
+        if ($request->hasFile('foto_peserta')) {
+            $peserta->foto_peserta = $request->file('foto_peserta')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('foto_ktp')) {
+            $peserta->foto_ktp = $request->file('foto_ktp')->store('uploads', 'public');
+        }
+
+        if ($request->hasFile('foto_catatan')) {
+            $peserta->foto_catatan = $request->file('foto_catatan')->store('uploads', 'public');
+        }
+
+        // Update data
+        $peserta->nama_peserta = $request->nama_peserta;
+        $peserta->nik = $request->nik;
+        $peserta->tempat_lahir = $request->tempat_lahir;
+        $peserta->tanggal_lahir = $request->tanggal_lahir;
+        $peserta->jenis_kelamin = $request->jenis_kelamin;
+
+        $peserta->no_paspor = $request->no_paspor;
+        $peserta->issuing_office = $request->issuing_office;
+        $peserta->date_of_issued = $request->date_of_issued;
+        $peserta->date_of_expiry = $request->date_of_expiry;
+
+        $peserta->jenis_perjalanan = $request->jenis_perjalanan;
+        $peserta->biaya = $request->biaya;
+        $peserta->hotel = $request->hotel;
+        $peserta->date_of_issued_perjalanan = $request->date_of_issued_perjalanan;
+        $peserta->date_of_expiry_perjalanan = $request->date_of_expiry_perjalanan;
+        $peserta->transportasi = $request->transportasi;
+        $peserta->kode_khusus_perjalanan = $request->kode_khusus_perjalanan;
+
+        $peserta->catatan = $request->catatan;
+        $peserta->username = $request->username;
+        if ($request->filled('password')) {
+            $peserta->password = bcrypt($request->password);
+        }
+        $peserta->no_telepon = $request->no_telepon;
+        $peserta->email = $request->email;
+
+        $peserta->save();
+
+        return redirect()->back()->with('success', 'Data berhasil diperbarui.');
+    }
+
+
 }

@@ -17,11 +17,11 @@
 
                 <div class="flex justify-center items-center my-8 w-max-4xl h-[250px] bg-transparent p-4 gap-4">
                     <!-- Gambar kiri (persegi) -->
-                    <img src="/images/foto.jpeg" alt="Foto Persegi"
+                    <img src="{{ asset('storage/' . $wisataluarnegeri->foto_peserta) }}" alt="Foto Persegi"
                         class="w-[250px] h-[250px] object-cover rounded-md border" />
 
                     <!-- Gambar kanan (4x5 potret) -->
-                    <img src="/images/foto.jpeg" alt="Foto 4x5" class="w-[380px] h-[250px] object-cover rounded-md border" />
+                    <img src="{{ asset('storage/' . $wisataluarnegeri->foto_ktp) }}" alt="Foto 4x5" class="w-[380px] h-[250px] object-cover rounded-md border" />
                 </div>
 
 
@@ -44,12 +44,12 @@
                             <!-- NIK/No. KTP -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">NIK/No. KTP</label>
                             <textarea readonly placeholder="NIK/No. KTP" name="nik" required
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">0002001212000001</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->nik }}</textarea>
 
                             <!-- NIK/No. KTP -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Jenis Kelamin</label>
                             <textarea readonly placeholder="NIK/No. KTP" name="nik" required
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Laki-laki</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->jenis_kelamin }}</textarea>
                         </div>
 
                         <!-- Kolom Kanan -->
@@ -58,12 +58,12 @@
                             <!-- Tempat Lahir -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">Tempat Lahir</label>
                             <textarea name="tempat_lahir" required placeholder="Tempat Lahir" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Banyumas</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->tempat_lahir }}</textarea>
 
                             <!-- Tanggal Lahir -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tanggal Lahir</label>
-                            <input name="tanggal_lahir" value="2025-04-07" required type="date" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
+                            <input name="tanggal_lahir" required type="date" readonly
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->tanggal_lahir }}</input>
                         </div>
                     </div>
                 </div>
@@ -108,29 +108,28 @@
                                             </div>
                                         </td>
                                         <td class="px-6 py-4">
-                                            <img src="{{ asset('/images/foto.jpeg') }}" alt="Foto"
-                                                class="w-10 h-10 rounded-full">
+                                            <img src="{{ asset('storage/' . $wisataluarnegeri->foto_peserta) }}" alt="Foto" class="w-10 h-10 rounded-full">
                                         </td>
                                         <td class="px-6 py-4 text-center">
                                             <div class="flex justify-center items-center">
-                                                Sukardi Santari
+                                                {{ $wisataluarnegeri->nama_peserta }}
                                             </div>
                                         </td>
                                         <td class="px-10 py-4 text-center">
                                             <div
                                                 class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
-                                                Perempuan
+                                                {{ $wisataluarnegeri->jenis_kelamin }}
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 text-center">
                                             <div class="flex justify-center items-center">
-                                                3302000303010001
+                                                {{ $wisataluarnegeri->nik }}
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 text-center">
                                             <div
                                                 class="flex justify-center items-center gap-2 bg-green-200 text-green-500 py-2 px-4 rounded-md w-fit mx-auto">
-                                                Suami - Istri
+                                                {{ $wisataluarnegeri->hubungan }}
                                             </div>
                                         </td>
                                     </tr>
@@ -153,12 +152,12 @@
                             <!-- No. Paspor -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">Username</label>
                             <textarea name="no_paspor" required placeholder="Username" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Faiz Al Fatih</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->username }}</textarea>
 
                             <!-- Issuing office -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Kata sandi</label>
                             <textarea name="issuing_office" required placeholder="Kata sandi" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">#FaizAlFatih2493</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">#{{ $wisataluarnegeri->password }}</textarea>
                         </div>
 
                         <!-- Kolom Kanan -->
@@ -166,12 +165,12 @@
                             <!-- No. Paspor -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">No. Telepon</label>
                             <textarea name="no_paspor" required placeholder="No. Telepon" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">085321769853</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->no_telepon }}</textarea>
 
                             <!-- Issuing office -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Email</label>
                             <textarea name="issuing_office" required placeholder="Email@gmail.com" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">faizalfth@gmail.com</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->email }}</textarea>
                         </div>
                     </div>
                 </div>
