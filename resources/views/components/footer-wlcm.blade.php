@@ -59,15 +59,15 @@
     <div class="md:w-3/5 flex flex-col gap-4">
         <!-- Foto Atas -->
         <div class="h-[30%] w-[60%] self-end">
-            <img src="images/foto.jpeg" alt="Foto Atas" class="w-full h-full object-cover rounded-lg">
+            <img src="images/footerimg/footer2.png" alt="Foto Atas" class="w-full h-full object-cover rounded-lg">
         </div>
         <!-- Foto Tengah -->
         <div class="h-[50%] w-full">
-            <img src="images/foto.jpeg" alt="Foto Tengah" class="w-full h-full object-cover rounded-lg">
+            <img src="images/footerimg/footer5.png" alt="Foto Tengah" class="w-full h-full object-cover rounded-lg">
         </div>
         <!-- Foto Bawah -->
         <div class="h-[20%] w-[60%] self-end">
-            <img src="images/foto.jpeg" alt="Foto Bawah" class="w-full h-full object-cover rounded-lg">
+            <img src="images/footerimg/footer4.png" alt="Foto Bawah" class="w-full h-full object-cover rounded-lg">
         </div>
     </div>
 
@@ -75,11 +75,11 @@
     <div class="w-full md:w-2/5 flex flex-col gap-4">
         <!-- Foto Kanan Atas -->
         <div class="h-[55%] w-full">
-            <img src="images/foto.jpeg" alt="Foto Kanan Atas" class="w-full h-full object-cover rounded-lg">
+            <img src="images/footerimg/footer1.png" alt="Foto Kanan Atas" class="w-full h-full object-cover rounded-lg">
         </div>
         <!-- Foto Kanan Bawah -->
         <div class="h-[45%] w-full">
-            <img src="images/foto.jpeg" alt="Foto Kanan Bawah" class="w-full h-full object-cover rounded-lg">
+            <img src="images/footerimg/footer3.png" alt="Foto Kanan Bawah" class="w-full h-full object-cover rounded-lg">
         </div>
     </div>
 </div>

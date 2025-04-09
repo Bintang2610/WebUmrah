@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Akan diisi secara dinamis -->
+                
                 </tbody>
             </table>
         </div>
@@ -113,9 +113,14 @@
                     </td>
                     <td class="px-6 py-4 text-center">${item.nik}</td>
                     <td class="px-6 py-4 text-center">
-                        <div class="flex justify-center items-center gap-2 bg-red-200 text-red-500 py-2 px-4 rounded-md w-fit mx-auto">
-                            <span>Hubungan</span>
-                            <i class="fa-solid fa-angle-right">-</i>
+                        <div class="relative w-fit mx-auto">
+                            <select id="dropdownStatus" onchange="changeColor(this)" class="appearance-none bg-red-200 text-red-500 font-medium py-2 pl-4 pr-10 rounded-md transition-all duration-300">
+                                <option class="bg-white" selected disabled>Hubungan</option>
+                                <option class="bg-white" value="suami-istri">Suami - Istri</option>
+                                <option class="bg-white" value="keluarga">Keluarga</option>
+                            </select>
+                            <!-- Icon panah kanan -->
+                            <i id="dropdownIcon" class="fa-solid fa-angle-right absolute right-3 top-1/2 transform -translate-y-1/2 text-red-500 pointer-events-none transition-all"></i>
                         </div>
                     </td>
                 `;
@@ -167,4 +172,19 @@
             });
         });
     });
+
+    function changeColor(select) {
+        if (select.value) {
+            // Ganti warna dropdown
+            select.classList.remove('bg-red-200', 'text-red-500');
+            select.classList.add('bg-green-200', 'text-green-500');
+
+            // Hilangkan icon
+            const icon = document.getElementById('dropdownIcon');
+            if (icon) {
+                icon.style.opacity = 0;
+                icon.style.transition = 'opacity 0.3s ease';
+            }
+        }
+    }
 </script>

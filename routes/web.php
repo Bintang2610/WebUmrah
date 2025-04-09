@@ -31,6 +31,14 @@ Route::get('/viewprofil', function () {
     return view('datauserview');
 });
 
+Route::get('/viewtrip', function () {
+    return view('datausertrip');
+});
+
+Route::get('/viewtransaction', function () {
+    return view('datausertrcs');
+});
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');
