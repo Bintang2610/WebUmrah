@@ -56,6 +56,14 @@ Route::get('/viewtransactionjh', function () {
     return view('trcsjhview');
 });
 
+Route::get('/viewdataarsip', function () {
+    return view('dataarsip');
+});
+
+Route::get('/viewdataarsipwl', function () {
+    return view('dataarsipwlview');
+});
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');
