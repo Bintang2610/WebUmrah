@@ -11,6 +11,7 @@ use App\Http\Controllers\JamaahHajiController;
 
 use App\Models\Transaksi;
 use App\Models\WisataLuarNegeri;
+use App\Models\WisataDomestik;
 
 use App\Http\Controllers\TransaksiController;
 
@@ -169,7 +170,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/dashboard/datawd', function () {
-        return view('datawd');
+        $dataWD = WisataDomestik::all();
+        return view('datawd', compact('dataWD'));
     });
 
     Route::get('/dashboard/dataju', function () {
@@ -235,13 +237,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/viewdatawl/{id}', [WisataLuarNegeriController::class, 'show'])->name('datawl.view');
     Route::get('/datawl/{id}/edit', [WisataLuarNegeriController::class, 'edit'])->name('wisataluarnegeri.edit');
     Route::put('/ubahdatawl/update/{id}', [WisataLuarNegeriController::class, 'update'])->name('wisataluarnegeri.update');
-    
-
-
 
 
     //Domestik
-    Route::post('/wisata-domestik/store', [WisataDomestikController::class, 'store'])->name('domestik.store');
+    Route::resource('wisata-domestik', WisataDomestikController::class);
+    Route::post('/wisata-domestik/store', [WisataDomestikController::class, 'store'])->name('wisata-domestik.store');
+    Route::get('/wisatadomestik', [wisataDomestikController::class, 'index'])->name('wisatadomestik.index');
+    Route::get('/wisata-domestik/create', [WisataDomestikController::class, 'create'])->name('wisata-domestik.create');
+
 
     //JamaahUmrah
     Route::post('/jamaah-umrah/store', [JamaahUmrahController::class, 'store'])->name('umrah.store');

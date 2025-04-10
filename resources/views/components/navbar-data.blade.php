@@ -8,7 +8,7 @@
             <p class="text-4xl font-semibold">67</p>
         </a>
 
-        <a href="{{ route('dashboard', 'datawd') }}"
+        <a href="/dashboard/datawd"
             class="{{ request()->is('dashboard/datawd') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }}
                text-gray-800 p-6 rounded-xl block">
             <p class="pb-2 text-lg">Wisata Domestik</p>
