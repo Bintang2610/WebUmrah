@@ -62,8 +62,8 @@
 
                             <!-- Tanggal Lahir -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tanggal Lahir</label>
-                            <input name="tanggal_lahir" required type="date" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $wisataluarnegeri->tanggal_lahir }}</input>
+                            <input name="tanggal_lahir" value="{{ $wisataluarnegeri->tanggal_lahir }}" required type="date" readonly
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
                         </div>
                     </div>
                 </div>

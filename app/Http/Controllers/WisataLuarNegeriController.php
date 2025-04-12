@@ -140,7 +140,7 @@ class WisataLuarNegeriController extends Controller
             'date_of_issued_perjalanan' => 'required|date',
             'date_of_expiry_perjalanan' => 'required|date',
             'transportasi' => 'required|string',
-            'kode_khusus_perjalanan' => 'required|string',
+            //'kode_khusus_perjalanan' => 'required|string',
 
             'catatan' => 'required|string',
             'foto_catatan' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',

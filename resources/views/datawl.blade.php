@@ -102,7 +102,7 @@
                             </td>
                             <td class="px-6 py-4 text-center">
                                 <div class="flex justify-center items-center">
-                                    21-06-2023
+                                    {{ $wisataluarnegeri->created_at  }}
                                 </div>
                             </td>
                             <td class="px-6 py-4 text-center">

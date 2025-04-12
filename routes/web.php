@@ -240,7 +240,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     //Domestik
-    Route::resource('wisata-domestik', WisataDomestikController::class);
+    // Route::resource('wisata-domestik', WisataDomestikController::class);
     Route::post('/wisata-domestik/store', [WisataDomestikController::class, 'store'])->name('wisata-domestik.store');
     Route::get('/wisatadomestik', [wisataDomestikController::class, 'index'])->name('wisatadomestik.index');
     Route::get('/wisata-domestik/create', [WisataDomestikController::class, 'create'])->name('wisata-domestik.create');

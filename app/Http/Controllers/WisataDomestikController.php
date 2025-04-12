@@ -31,7 +31,7 @@ class WisataDomestikController extends Controller
             'tanggal_lahir' => 'required|date',
             'jenis_kelamin' => 'required|in:L,P',
             'foto_peserta' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'jenis_hubungan' => 'required|in:Keluarga,Suami-istri',
+            // 'jenis_hubungan' => 'required|in:Keluarga,Suami-istri',
 
             'jenis_perjalanan' => 'required|string',
             'biaya' => 'required|string',
@@ -67,6 +67,8 @@ class WisataDomestikController extends Controller
         }
 
 
+
+
         WisataDomestik::create([
             'nama_peserta' => $request->nama_peserta,
             'nik' => $request->nik,
@@ -74,7 +76,7 @@ class WisataDomestikController extends Controller
             'tanggal_lahir' => $request->tanggal_lahir,
             'jenis_kelamin' => $request->jenis_kelamin,
             'foto_peserta' => $fotoPath,
-            'jenis_hubungan' => $request->jenis_hubungan,
+            // 'jenis_hubungan' => $request->jenis_hubungan,
 
             'jenis_perjalanan' => $request->jenis_perjalanan,
             'biaya' => $request->biaya,
