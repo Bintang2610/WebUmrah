@@ -56,6 +56,22 @@ Route::get('/viewtransactionjh', function () {
     return view('trcsjhview');
 });
 
+Route::get('/changetransactionwl', function () {
+    return view('trcswlchange');
+});
+
+Route::get('/changetransactionwd', function () {
+    return view('trcswdchange');
+});
+
+Route::get('/changetransactionju', function () {
+    return view('trcsjuchange');
+});
+
+Route::get('/changetransactionjh', function () {
+    return view('trcsjhchange');
+});
+
 Route::get('/viewdataarsip', function () {
     return view('dataarsip');
 });

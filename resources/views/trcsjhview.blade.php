@@ -74,11 +74,11 @@
 <label class="block text-sm mb-4 font-medium mt-4 text-gray-700">Kategori</label>
                 <div class="flex items-center text-sm gap-x-4 space-x-4 mt-2">
                     <label class="flex items-center">
-                        <input type="radio" checked disabled name="jenis_kelamin" value="L" required class="mr-2">
+                        <input type="radio" checked disabled name="lunas" value="L" required class="mr-2">
                         DP
                     </label>
                     <label class="flex items-center">
-                        <input type="radio" disabled name="jenis_kelamin" value="P" required class="mr-2">
+                        <input type="radio" disabled name="lunas" value="P" required class="mr-2">
                         Pelunasan
                     </label>
                 </div>
