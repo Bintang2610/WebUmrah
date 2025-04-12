@@ -79,12 +79,12 @@
             <div class="relative w-full">
   <!-- Textarea -->
   <textarea data-open-surat1 id="noteArea" placeholder="Catatan"
-    class="w-full h-[300px] bg-white text-sm px-2 py-1 cursor-pointer border rounded-md resize-none pr-10">
+    class="w-full h-[300px] bg-white text-sm px-2 py-1 cursor-pointer border rounded-md resize-none pr-10">halo
   </textarea>
 
   <!-- Gambar Preview (disembunyikan dulu) -->
   <div data-open-surat1 id="imagePreviewContainer" class="cursor-pointer bg-white w-full h-[300px] border items-center py-4 pl-8 rounded-md overflow-hidden flex justify-left">
-  <img id="imagePreview" class="w-auto h-full object-contain" />
+  <img id="imagePreview" src="/images/foto.jpeg" class="w-auto h-full object-contain" />
 </div>
 </div>
 

@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-                <!-- pop up delete -->
+                <!-- pop up recov -->
                 <div id="recovmodal"
                     class="fixed text-black inset-0 flex items-center justify-center bg-gray-900 bg-opacity-80 hidden">
                     <div class="bg-white rounded-lg shadow-lg p-6 w-1/4">

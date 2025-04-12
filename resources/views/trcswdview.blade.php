@@ -1,6 +1,6 @@
 @extends('layouts.adddata')
 
-@section('title', 'Dashboard - Tambah Data Transaksi')
+@section('title', 'Transaction - Data Transaksi')
 
 
 @section('content')
