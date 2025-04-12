@@ -67,7 +67,7 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 </div>
             </div>
         </div>
-        <div class="relative mx-2 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
+        <div class="relative mx-2 mt-8 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
             <!-- Judul -->
             <div class="text-left mb-6">
                 <h2 class="text-lg font-semibold">Hubungan</h2>
@@ -92,7 +92,10 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 Jenis Kelamin
             </th>
             <th scope="col" class="px-6 py-3">
-                NIK/No. KTP
+                Tempat Lahir
+            </th>
+            <th scope="col" class="px-6 py-3">
+                Tanggal Lahir
             </th>
             <th scope="col" class="px-6 py-3">
                 Hubungan
@@ -116,17 +119,22 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 </div>
             </td>
             <td class="px-10 py-4 text-center">
-                <div class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
-                                Perempuan
+                <div id="kategoriData" class="flex mx-auto justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
+                                Laki-laki
                             </div>
             </td>
             <td class="px-6 py-4 text-center">
                 <div class="flex justify-center items-center">
-                3302000303010001
+                Kudus
                 </div>
             </td>
             <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center gap-2 bg-green-200 text-green-500 py-2 px-4 rounded-md w-fit mx-auto">
+                <div class="flex justify-center items-center">
+                11-11-11
+                </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center gap-2 bg-green-200 text-green-500 py-2 px-4 rounded-md">
                 Suami - Istri
                 </div>
             </td>
@@ -209,5 +217,27 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
         </div>
     </div>
 </form>
+<script>
+    const div = document.getElementById('kategoriData');
+    const text = div.textContent.trim();
+
+    // Reset dulu semua warna
+    div.classList.remove(
+        'bg-blue-200', 'text-blue-500',
+        'bg-purple-200', 'text-purple-400'
+    );
+
+    // Tambahkan class sesuai isi
+    switch (text) {
+        case 'Laki-laki':
+            div.classList.add('bg-blue-200', 'text-blue-500');
+            break;
+        case 'Perempuan':
+            div.classList.add('bg-purple-200', 'text-purple-400');
+            break;
+        default:
+            div.classList.add('bg-blue-200', 'text-blue-500'); // fallback
+    }
+</script>
 
 @endsection

@@ -56,6 +56,30 @@ Route::get('/viewtransactionjh', function () {
     return view('trcsjhview');
 });
 
+Route::get('/changetransactionwl', function () {
+    return view('trcswlchange');
+});
+
+Route::get('/changetransactionwd', function () {
+    return view('trcswdchange');
+});
+
+Route::get('/changetransactionju', function () {
+    return view('trcsjuchange');
+});
+
+Route::get('/changetransactionjh', function () {
+    return view('trcsjhchange');
+});
+
+Route::get('/viewdataarsip', function () {
+    return view('dataarsip');
+});
+
+Route::get('/viewdataarsipwl', function () {
+    return view('dataarsipwlview');
+});
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');
