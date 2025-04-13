@@ -22,15 +22,38 @@
         <li>        
           <x-navbarlink-wlcm href="/hubungi" :active="request()->is('hubungi*')">Hubungi</x-navbarlink-wlcm>
         </li>
+        @auth
+            <li>
+                <x-navbarlink-wlcm href="/dashboard" :active="request()->is('dashboard*')">Dashboard</x-navbarlink-wlcm>
+            </li>
+        @endauth
       </ul>
     </div>
 
     <!-- Tombol Menu Mobile + Login -->
     <div class="flex items-center space-x-3 md:ml-4">
     @auth
-    <a href="/viewuserprofil" class="text-center">
-        <img src="/logobiru.png" alt="Profil" class="w-8">
-    </a>
+    <div class="relative inline-block text-left">
+    <!-- Tombol Gambar Profil -->
+    <button id="dropdownButton" type="button" class="inline-flex justify-center w-full" onclick="toggleDropdown()">
+        <img src="/logobiru.png" alt="Profil" class="w-8 rounded-full">
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdownMenu" class="justify-center hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+        <a href="/viewuserprofil" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+            Profil
+        </a>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="flex items-center w-full gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <!-- Icon Logout (Heroicons Logout) -->
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+        </form>
+    </div>
+</div>
 @else
     <a href="/login" class="text-black bg-white border border-black hover:bg-gray-50 font-medium rounded-md text-sm px-6 py-2 text-center">Masuk</a>
 @endauth
@@ -48,3 +71,19 @@
 
   </div>
 </nav>
+<script>
+    function toggleDropdown() {
+        const menu = document.getElementById('dropdownMenu');
+        menu.classList.toggle('hidden');
+    }
+
+    // Optional: Tutup dropdown saat klik di luar
+    window.addEventListener('click', function (e) {
+        const button = document.getElementById('dropdownButton');
+        const menu = document.getElementById('dropdownMenu');
+
+        if (!button.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+        }
+    });
+</script>

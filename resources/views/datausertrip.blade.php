@@ -1,4 +1,4 @@
-@extends('layouts.adddata')
+@extends('layouts.profil')
 
 @section('title', 'Dashboard - Profil Peserta')
 
