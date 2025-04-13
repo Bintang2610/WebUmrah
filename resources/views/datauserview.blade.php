@@ -1,4 +1,4 @@
-@extends('layouts.adddata')
+@extends('layouts.profil')
 
 @section('title', 'Dashboard - Profil Peserta')
 
@@ -6,7 +6,6 @@
 @section('content')
 <div class="flex items-center justify-center  min-h-screen mb-8 mt-20">
 
-<form action="" method="POST" enctype="multipart/form-data" class="w-full">
     @csrf
     <div class="mt-8 mb-16 px-8 py-8 bg-white text-black rounded-2xl">
 
@@ -41,7 +40,7 @@
                     <!-- Nama Jamaah -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Nama Peserta</label>
                     <textarea name="nama_peserta" required placeholder="Nama Peserta"
-                    readonly class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Faiz Al Fatih</textarea>
+                    readonly class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ Auth::user()->username }}</textarea>
 
 <!-- NIK/No. KTP -->
 <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">NIK/No. KTP</label>
@@ -215,8 +214,15 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 </div>
             </div>
         </div>
-    </div>
+
+<form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <button type="submit" class="text-black bg-white border border-black hover:bg-gray-50 font-medium rounded-md text-sm px-6 py-2 text-center">
+        Logout
+    </button>
 </form>
+    </div>
+
 <script>
     const div = document.getElementById('kategoriData');
     const text = div.textContent.trim();

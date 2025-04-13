@@ -81,6 +81,8 @@ Route::get('/viewdataarsipwl', function () {
     return view('dataarsipwlview');
 });
 
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');
@@ -91,6 +93,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 //tambah
 Route::get('/tambahdatajh', function () {
     return view('datajhadd');
+});
+
+Route::get('/viewuserprofil', function () {
+    return view('datauserview');
 });
 
 Route::get('/tambahdataju', function () {
