@@ -107,7 +107,7 @@
                     </div>
                 </div>
 
-                <x-tblhub-datawd></x-tblhub-datawd>
+                <x-tblhub-datawd :dataWD="$dataWD" />
 
                 <div class="relative mx-2 mt-8 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
                     <!-- Judul -->
@@ -159,11 +159,11 @@
 
                         <div class="flex gap-4 items-center">
                             <!-- Textarea -->
-                            <textarea name="kode_khusus_perjalanan" required placeholder="Kode khusus perjalanan"
+                            <textarea id="kodeKhusus" name="kode_khusus_perjalanan" required placeholder="Kode khusus perjalanan"
                                 class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md resize-none"></textarea>
 
                             <!-- Tombol -->
-                            <button type="button"
+                            <button type="button" id="btnGenerateKode"
                                 class="h-[50px] w-[130px] px-4 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition">
                                 Buat Kode
                             </button>
@@ -243,5 +243,17 @@
                 </div>
             </div>
         </form>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const btnGenerate = document.getElementById("btnGenerateKode");
+                const textareaKode = document.getElementById("kodeKhusus");
+
+                btnGenerate.addEventListener("click", function () {
+                    const kode = Math.floor(100000 + Math.random() * 900000); // 6 digit angka acak
+                    textareaKode.value = kode;
+                });
+            });
+        </script>
 
     @endsection

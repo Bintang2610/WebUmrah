@@ -102,7 +102,7 @@
                                 </td>
                                 <td class="px-6 py-4 text-center">
                                     <div class="flex justify-center items-center">
-
+                                        {{$wisatadomestik ->created_at}}
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
@@ -119,12 +119,12 @@
                                     <div class="flex justify-center items-center gap-4">
 
                                         <!-- Tombol Lihat -->
-                                        <a href="/viewdatawd" class="text-blue-400 hover:text-blue-500">
+                                        <a href="{{ route('datawd.view', $wisatadomestik->id) }}" class="text-blue-400 hover:text-blue-500">
                                             <i class="fa-solid fa-eye"></i>
                                         </a>
 
                                         <!-- Tombol Edit -->
-                                        <a href="/ubahdatawd" class="text-yellow-500 hover:text-yellow-600">
+                                        <a href="{{route("wisatadomestik.edit", $wisatadomestik->id)}}" class="text-yellow-500 hover:text-yellow-600">
                                             <i class="fa-solid fa-pen-to-square text-lg"></i>
                                         </a>
 

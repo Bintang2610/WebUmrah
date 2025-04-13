@@ -15,14 +15,14 @@
             <p class="text-4xl font-semibold">39</p>
         </a>
 
-        <a href="{{ route('dashboard', 'dataju') }}"
+        <a href="/dashboard/dataju"
             class="{{ request()->is('dashboard/dataju') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }}
                text-gray-800 p-6 rounded-xl block">
             <p class="pb-2 text-lg">Jamaah Umrah</p>
             <p class="text-4xl font-semibold">53</p>
         </a>
 
-        <a href="{{ route('dashboard', 'datajh') }}"
+        <a href="/dashboard/datajh"
             class="{{ request()->is('dashboard/datajh') ? 'bg-white bg-opacity-25 hover:bg-white hover:bg-opacity-50' : 'bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-25' }}
                text-gray-800 p-6 rounded-xl block">
             <p class="pb-2 text-lg">Jamaah Haji</p>

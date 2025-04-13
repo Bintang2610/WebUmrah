@@ -87,24 +87,7 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-
-Route::get('/dashboard/datawl', function () {
-    return view('datawl');
-});
-
-Route::get('/dashboard/datawd', function () {
-    return view('datawd');
-});
-
-Route::get('/dashboard/dataju', function () {
-    return view('dataju');
-});
-
-Route::get('/dashboard/datajh', function () {
-    return view('datajh');
-});
-
-
+//tambah
 Route::get('/tambahdatajh', function () {
     return view('datajhadd');
 });
@@ -121,14 +104,14 @@ Route::get('/tambahdatawd', function () {
     return view('datawdadd');
 });
 
+//ubah
 Route::get('/ubahdatawl', function () {
     return view('datawlchange');
 });
 
-Route::get('/ubahdatawl', function () {
-    return view('datawlchange');
+Route::get('/ubahdatawd', function () {
+    return view('datawdchange');
 });
-
 
 Route::get('/ubahdataju', function () {
     return view('datajuchange');
@@ -140,10 +123,6 @@ Route::get('/ubahdatajh', function () {
 
 Route::get('/tambahdatatransaksi', function () {
     return view('trcsadd');
-});
-
-Route::get('/viewdatawl', function () {
-    return view('datawlview');
 });
 
 Route::get('/viewdatawd', function () {
@@ -207,6 +186,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
 
+//TAMBAH
     Route::get('/tambahdatajh', function () {
         return view('datajhadd');
     });
@@ -221,18 +201,27 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/tambahdatawd', function () {
-        return view('datawdadd');
+        $dataWD = WisataDomestik::all();
+        return view('datawdadd', compact('dataWD'));
     });
-
 
     Route::get('/tambahdatatransaksi', function () {
         return view('trcsadd');
     });
 
+
+    //VIEW
     Route::get('/viewdatawl', function () {
         $dataWLN = WisataLuarNegeri::all();
         return view('datawlview', compact('dataWLN'));
     });
+
+    Route::get('/viewdatawd', function () {
+        $dataWD = WisataDomestik::all();
+        return view('datawdview', compact('dataWD'));
+    });
+
+
 
     Route::get('/transaction/datawl', function () {
         return view('trcswl');
@@ -268,7 +257,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/wisata-domestik/store', [WisataDomestikController::class, 'store'])->name('wisata-domestik.store');
     Route::get('/wisatadomestik', [wisataDomestikController::class, 'index'])->name('wisatadomestik.index');
     Route::get('/wisata-domestik/create', [WisataDomestikController::class, 'create'])->name('wisata-domestik.create');
-
+    Route::get('/viewdatawd/{id}', [WisataDomestikController::class, 'show'])->name('datawd.view');
+    Route::get('/datawd/{id}/edit', [WisataDomestikController::class, 'edit'])->name('wisatadomestik.edit');
+    Route::put('/ubahdatawd/update/{id}', [WisataDomestikController::class, 'update'])->name('wisatadomestik.update');
 
     //JamaahUmrah
     Route::post('/jamaah-umrah/store', [JamaahUmrahController::class, 'store'])->name('umrah.store');
