@@ -80,6 +80,8 @@ Route::get('/viewdataarsipwl', function () {
     return view('dataarsipwlview');
 });
 
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 // Rute Login
 Route::get('/login', function () {
     return view('login');
