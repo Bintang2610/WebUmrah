@@ -41,7 +41,7 @@
 
     <!-- Dropdown Menu -->
     <div id="dropdownMenu" class="justify-center hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
-        <a href="/viewuserprofil" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+        <a href="/viewadminprofil" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
             Profil
         </a>
         <form action="{{ route('logout') }}" method="POST">

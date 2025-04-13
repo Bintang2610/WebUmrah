@@ -99,6 +99,10 @@ Route::get('/viewuserprofil', function () {
     return view('datauserview');
 });
 
+Route::get('/viewadminprofil', function () {
+    return view('dataadminview');
+});
+
 Route::get('/tambahdataju', function () {
     return view('datajuadd');
 });
