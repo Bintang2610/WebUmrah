@@ -43,7 +43,7 @@
     </div>
 
     <div class="bg-[#27A1FF] rounded-full mt-16 mb-10 py-4 px-8 text-center shadow-lg">
-        <a href="/portofolio" class="text-md text-white">Lihat Selengkapnya</a>
+        <a href="https://www.instagram.com/elkhadijah.official?igsh=d3Q1eHh6dno0OHBv" target="_blank" class="text-md text-white">Lihat Selengkapnya</a>
     </div>
 
 </section>

@@ -20,7 +20,7 @@
           <x-navbarlink-wlcm href="/portofolio" :active="request()->is('portofolio*')">Portofolio</x-navbarlink-wlcm>
         </li>
         <li>        
-          <x-navbarlink-wlcm href="/hubungi" :active="request()->is('hubungi*')">Hubungi</x-navbarlink-wlcm>
+          <a href="https://www.instagram.com/elkhadijah.official?igsh=d3Q1eHh6dno0OHBv" class="hover:text-blue-700" target="_blank">Hubungi</a>
         </li>
         @auth
             <li>
