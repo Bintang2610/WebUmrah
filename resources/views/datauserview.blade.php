@@ -147,7 +147,7 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
         <div class="relative mx-2 mt-8 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
             <!-- Judul -->
             <div class="text-left mb-6">
-                <h2 class="text-lg font-semibold">Hubungan</h2>
+                <h2 class="text-lg font-semibold">Daftar Perjalanan</h2>
             </div>
 
             <!-- Data Hubungan -->

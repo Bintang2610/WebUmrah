@@ -37,6 +37,22 @@ Route::get('/viewusertrip', function () {
     return view('datausertrip');
 });
 
+Route::get('/viewdatajhtrip', function () {
+    return view('datajhviewtrip');
+});
+
+Route::get('/viewdatajutrip', function () {
+    return view('datajuviewtrip');
+});
+
+Route::get('/viewdatawltrip', function () {
+    return view('datawlviewtrip');
+});
+
+Route::get('/viewdatawdtrip', function () {
+    return view('datawdviewtrip');
+});
+
 Route::get('/viewusertransaction', function () {
     return view('datausertrcs');
 });

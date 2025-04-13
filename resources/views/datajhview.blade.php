@@ -116,7 +116,7 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 </div>
             </td>
             <td class="px-10 py-4 text-center">
-                <div class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
+                <div id="kategoriData" class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
                                 Perempuan
                             </div>
             </td>
@@ -129,6 +129,78 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 <div class="flex justify-center items-center gap-2 bg-green-200 text-green-500 py-2 px-4 rounded-md w-fit mx-auto">
                 Suami - Istri
                 </div>
+            </td>
+        </tr>
+    </tbody>
+        </table>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="relative mx-2 mt-8 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
+            <!-- Judul -->
+            <div class="text-left mb-6">
+                <h2 class="text-lg font-semibold">Daftar Perjalanan</h2>
+            </div>
+
+            <!-- Data Hubungan -->
+            <div class="mt-6">
+                <div class="overflow-x-auto mt-1 rounded-xl">
+                <table
+    class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500">
+    <thead class="text-md text-gray-700">
+        <tr class=" border-b text-center">
+            <th scope="col" class="px-6 py-3">
+                No
+            </th>
+            <th scope="col" class="px-6 py-3">
+            Jenis dan kode perjalanan
+            </th>
+            <th scope="col" class="px-6 py-3">
+            Tanggal daftar
+            </th>
+            <th scope="col" class="px-6 py-3">
+            Perkiraan keberangkatan
+            </th>
+            <th scope="col" class="px-6 py-3">
+            Perkiraan kepulangan
+            </th>
+            <th scope="col" class="px-6 py-3">
+            Aksi
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                    1
+                </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+            Haji (3911205)
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                12-05-2023
+                </div>
+            </td>
+            <td class="px-10 py-4 text-center">
+                <div class="flex justify-center items-center">
+                12-05-2023
+                </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+                <div class="flex justify-center items-center">
+                12-05-2023
+                </div>
+            </td>
+            <td class="px-6 py-4 text-center">
+                <a href="/viewdatajhtrip" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
+                Lihat data
+                </a>
             </td>
         </tr>
     </tbody>
@@ -172,14 +244,30 @@ class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-
                 </div>
             </div>
         </div>
-
-        <div class="flex items-center my-12">
-        <button type="submit"
-                    class="w-full bg-green-500 text-white text-sm ml-2 px-5 py-3 rounded-lg hover:bg-green-600 transition">
-                    Simpan
-                </button>
-        </div>
     </div>
 </form>
+
+<script>
+    const div = document.getElementById('kategoriData');
+    const text = div.textContent.trim();
+
+    // Reset dulu semua warna
+    div.classList.remove(
+        'bg-blue-200', 'text-blue-500',
+        'bg-purple-200', 'text-purple-400'
+    );
+
+    // Tambahkan class sesuai isi
+    switch (text) {
+        case 'Laki-laki':
+            div.classList.add('bg-blue-200', 'text-blue-500');
+            break;
+        case 'Perempuan':
+            div.classList.add('bg-purple-200', 'text-purple-400');
+            break;
+        default:
+            div.classList.add('bg-blue-200', 'text-blue-500'); // fallback
+    }
+</script>
 
 @endsection
