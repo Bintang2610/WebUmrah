@@ -12,6 +12,7 @@ use App\Http\Controllers\JamaahHajiController;
 use App\Models\Transaksi;
 use App\Models\WisataLuarNegeri;
 use App\Models\WisataDomestik;
+use App\Models\jamaahumrah;
 
 use App\Http\Controllers\TransaksiController;
 
@@ -125,14 +126,6 @@ Route::get('/tambahdatatransaksi', function () {
     return view('trcsadd');
 });
 
-Route::get('/viewdatawd', function () {
-    return view('datawdview');
-});
-
-Route::get('/viewdataju', function () {
-    return view('datajuview');
-});
-
 Route::get('/viewdatajh', function () {
     return view('datajhview');
 });
@@ -178,7 +171,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/dashboard/dataju', function () {
-        return view('dataju');
+        $umrah = JamaahUmrah::all();
+        return view('dataju', compact('umrah'));
     });
 
     Route::get('/dashboard/datajh', function () {
@@ -192,7 +186,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/tambahdataju', function () {
-        return view('datajuadd');
+        $umrah = JamaahUmrah::all();
+        return view('datajuadd', compact('umrah'));
     });
 
     Route::get('/tambahdatawl', function () {
@@ -219,6 +214,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/viewdatawd', function () {
         $dataWD = WisataDomestik::all();
         return view('datawdview', compact('dataWD'));
+    });
+
+    Route::get('/viewdataju', function () {
+        $umrah = JamaahUmrah::all();
+        return view('datajuview', compact('umrah'));
     });
 
 
@@ -263,6 +263,12 @@ Route::middleware(['auth'])->group(function () {
 
     //JamaahUmrah
     Route::post('/jamaah-umrah/store', [JamaahUmrahController::class, 'store'])->name('umrah.store');
+    Route::get('/jamaahumrah', [JamaahUmrahController::class, 'index'])->name('umrah.index');
+    Route::get('/jamaah-umrah/create', [JamaahUmrahController::class, 'create'])->name('jamaah_umrah.create');
+    Route::get('viewdataju/{id}', [JamaahUmrahController::class, 'show'])->name('dataumrah.view');
+    Route::get('/dataju/{id}/edit', [JamaahUmrahController::class, 'edit'])->name('jamaahumrah.edit');
+    Route::put('/ubahdataju/update/{id}', [JamaahUmrahController::class, 'update'])->name('jamaahumrah.update');
+
 
     //JamaahHaji
     Route::post('/jamaah-haji/store', [WisataLuarNegeriController::class, 'store'])->name('haji.store');

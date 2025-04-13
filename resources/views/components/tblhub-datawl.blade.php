@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+
                 </tbody>
             </table>
         </div>
@@ -56,8 +56,7 @@
                         <tr class="data-row bg-white hover:bg-gray-50 text-black text-center">
                             <td class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex justify-center items-center">
-                                    <input type="checkbox"
-                                        class="checkbox-input w-5 h-5 rounded border-gray-300 text-green-500 focus:ring-green-500"
+                                    <input type="checkbox" class="checkbox-input w-5 h-5 rounded border-gray-300 text-green-500 focus:ring-green-500"
                                         data-id="{{ $wisataluarnegeri->id }}"
                                         data-nama="{{ $wisataluarnegeri->nama_peserta }}"
                                         data-jk="{{ $wisataluarnegeri->jenis_kelamin }}"
@@ -96,22 +95,22 @@
 
         function renderHubunganRows() {
             dataHubunganTable.innerHTML = ""; // Clear
-            hubunganData.forEach((item, index) => {
+            hubunganData.forEach((luar, index) => {
                 const row = document.createElement("tr");
-                row.id = "hubungan-row-" + item.id;
+                row.id = "hubungan-row-" + luar.id;
                 row.className = "bg-white hover:bg-gray-50 text-black text-center";
                 row.innerHTML = `
                     <td class="px-6 py-4 text-center">${index + 1}</td>
                     <td class="px-6 py-4">
-                        <img src="${item.foto}" class="w-10 h-10 rounded-full" alt="Foto">
+                        <img src="${luar.foto}" class="w-10 h-10 rounded-full" alt="Foto">
                     </td>
-                    <td class="px-6 py-4 text-center">${item.nama}</td>
+                    <td class="px-6 py-4 text-center">${luar.nama}</td>
                     <td class="px-10 py-4 text-center">
                         <div class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
-                            ${item.jk}
+                            ${luar.jk}
                         </div>
                     </td>
-                    <td class="px-6 py-4 text-center">${item.nik}</td>
+                    <td class="px-6 py-4 text-center">${luar.nik}</td>
                     <td class="px-6 py-4 text-center">
                         <div class="relative w-fit mx-auto">
                             <select id="dropdownStatus" onchange="changeColor(this)" class="appearance-none bg-red-200 text-red-500 font-medium py-2 pl-4 pr-10 rounded-md transition-all duration-300">
@@ -134,7 +133,7 @@
         // Ceklis otomatis dari localStorage
         checkboxes.forEach((checkbox) => {
             const id = checkbox.dataset.id;
-            if (hubunganData.some(item => item.id === id)) {
+            if (hubunganData.some(luar => luar.id === id)) {
                 checkbox.checked = true;
             }
 
@@ -146,13 +145,13 @@
                 const foto = this.dataset.foto;
 
                 if (this.checked) {
-                    if (!hubunganData.some(item => item.id === id)) {
+                    if (!hubunganData.some(luar => luar.id === id)) {
                         hubunganData.push({ id, nama, jk, nik, foto });
                         localStorage.setItem("hubunganData", JSON.stringify(hubunganData));
                         renderHubunganRows();
                     }
                 } else {
-                    hubunganData = hubunganData.filter(item => item.id !== id);
+                    hubunganData = hubunganData.filter(luar => luar.id !== id);
                     localStorage.setItem("hubunganData", JSON.stringify(hubunganData));
                     renderHubunganRows();
                 }
