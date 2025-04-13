@@ -40,7 +40,7 @@
                     <!-- Nama Jamaah -->
                     <label class="block text-sm mb-2 font-medium text-gray-700">Nama Peserta</label>
                     <textarea name="nama_peserta" required placeholder="Nama Peserta"
-                    readonly class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">Faiz Al Fatih</textarea>
+                    readonly class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ Auth::user()->username }}</textarea>
 
 <!-- NIK/No. KTP -->
 <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">NIK/No. KTP</label>

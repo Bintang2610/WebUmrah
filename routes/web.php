@@ -94,6 +94,10 @@ Route::get('/tambahdatajh', function () {
     return view('datajhadd');
 });
 
+Route::get('/viewuserprofil', function () {
+    return view('datauserview');
+});
+
 Route::get('/tambahdataju', function () {
     return view('datajuadd');
 });
