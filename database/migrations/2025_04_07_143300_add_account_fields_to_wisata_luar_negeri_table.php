@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('wisata_luar_negeri', function (Blueprint $table) {
-            $table->string('nama_pengguna');
+            $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('no_telepon', 20);
@@ -19,7 +19,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('wisata_luar_negeri', function (Blueprint $table) {
-            $table->dropColumn(['nama_pengguna', 'email', 'password', 'no_telepon']);
+            $table->dropColumn(['username', 'email', 'password', 'no_telepon']);
         });
     }
 };
