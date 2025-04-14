@@ -24,7 +24,7 @@
                 <svg class="w-6 h-6 text-[#27A1FF]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.39 14.37c-1.49-.24-2.95-.61-4.36-1.1a1.99 1.99 0 0 0-1.94.34l-1.6 1.2c-1.69-1.1-3.17-2.57-4.26-4.26l1.2-1.6a1.99 1.99 0 0 0 .34-1.94 15.996 15.996 0 0 1-1.1-4.36A2 2 0 0 0 5.63 2H3a2 2 0 0 0-2 2c0 9.39 7.61 17 17 17a2 2 0 0 0 2-2v-2.63a2 2 0 0 0-1.61-1.99Z"></path>
                 </svg>
-                <p class="lg:max-w-96 md:max-w-60 sm:max-w-96 max-w-60 text-xs sm:text-lg md:text-lg">0858 - 4860 - 7671</p>
+                <p class="lg:max-w-96 md:max-w-60 sm:max-w-96 max-w-60 text-xs sm:text-lg md:text-lg">0822 - 2570 - 0808</p>
             </div>
 
             <!-- Instagram -->

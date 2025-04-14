@@ -80,7 +80,7 @@
           <x-navbarlink-wlcm href="/portofolio" :active="request()->is('portofolio*')">Portofolio</x-navbarlink-wlcm>
         </li>
         <li>        
-          <a href="https://www.instagram.com/elkhadijah.official?igsh=d3Q1eHh6dno0OHBv" class="text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 block py-2 px-3 md:p-0" target="_blank">Hubungi</a>
+          <a href="http://wa.me/+6282225700808" class="text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 block py-2 px-3 md:p-0" target="_blank">Hubungi</a>
         </li>
           @auth
           <li><a href="/dashboard" class="lg:block hidden text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 block py-2 px-3 md:p-0">Dashboard</a></li>
