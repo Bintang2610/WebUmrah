@@ -22,7 +22,8 @@
                         class="w-[250px] h-[250px] object-cover rounded-md border" />
 
                     <!-- Gambar kanan (4x5 potret) -->
-                    <img src="{{ asset('storage/' . $jamaahumrah->foto_ktp) }}" alt="Foto 4x5" class="w-[380px] h-[250px] object-cover rounded-md border" />
+                    <img src="{{ asset('storage/' . $jamaahumrah->foto_ktp) }}" alt="Foto 4x5"
+                        class="w-[380px] h-[250px] object-cover rounded-md border" />
                 </div>
 
 
@@ -39,17 +40,17 @@
                             <!-- Nama Jamaah -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">Nama Peserta</label>
                             <textarea name="nama_peserta" required placeholder="Nama Peserta" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->nama_peserta}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->nama_peserta }}</textarea>
 
                             <!-- NIK/No. KTP -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">NIK/No. KTP</label>
                             <textarea readonly placeholder="NIK/No. KTP" name="nik" required
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->nik}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->nik }}</textarea>
 
                             <!-- NIK/No. KTP -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Jenis Kelamin</label>
                             <textarea readonly placeholder="NIK/No. KTP" name="nik" required
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->jenis_kelamin}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->jenis_kelamin }}</textarea>
                         </div>
 
                         <!-- Kolom Kanan -->
@@ -58,11 +59,12 @@
                             <!-- Tempat Lahir -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">Tempat Lahir</label>
                             <textarea name="tempat_lahir" required placeholder="Tempat Lahir" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->tempat_lahir}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->tempat_lahir }}</textarea>
 
                             <!-- Tanggal Lahir -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Tanggal Lahir</label>
-                            <input name="tanggal_lahir" value="{{$jamaahumrah->tanggal_lahir}}" required type="date" readonly
+                            <input name="tanggal_lahir" value="{{ $jamaahumrah->tanggal_lahir }}" required type="date"
+                                readonly
                                 class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none"></input>
                         </div>
                     </div>
@@ -113,18 +115,18 @@
                                         </td>
                                         <td class="px-6 py-4 text-center">
                                             <div class="flex justify-center items-center">
-                                                {{$jamaahumrah->nama_peserta}}
+                                                {{ $jamaahumrah->nama_peserta }}
                                             </div>
                                         </td>
                                         <td class="px-10 py-4 text-center">
                                             <div
                                                 class="flex justify-center rounded-md py-2 items-center bg-purple-200 text-purple-400">
-                                                {{$jamaahumrah->jenis_kelamin}}
+                                                {{ $jamaahumrah->jenis_kelamin }}
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 text-center">
                                             <div class="flex justify-center items-center">
-                                                {{$jamaahumrah->nik}}
+                                                {{ $jamaahumrah->nik }}
                                             </div>
                                         </td>
                                         <td class="px-6 py-4 text-center">
@@ -139,78 +141,79 @@
                         </div>
                     </div>
                 </div>
-        
 
-        <div class="relative mx-2 mt-8 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
-            <!-- Judul -->
-            <div class="text-left mb-6">
-                <h2 class="text-lg font-semibold">Daftar Perjalanan</h2>
-            </div>
 
-            <!-- Data Hubungan -->
-            <div class="mt-6">
-                <div class="overflow-x-auto mt-1 rounded-xl">
-                <table
-    class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500">
-    <thead class="text-md text-gray-700">
-        <tr class=" border-b text-center">
-            <th scope="col" class="px-6 py-3">
-                No
-            </th>
-            <th scope="col" class="px-6 py-3">
-            Jenis dan kode perjalanan
-            </th>
-            <th scope="col" class="px-6 py-3">
-            Tanggal daftar
-            </th>
-            <th scope="col" class="px-6 py-3">
-            Perkiraan keberangkatan
-            </th>
-            <th scope="col" class="px-6 py-3">
-            Perkiraan kepulangan
-            </th>
-            <th scope="col" class="px-6 py-3">
-            Aksi
-            </th>
-        </tr>
-    </thead>
+                <div class="relative mx-2 mt-8 px-10 py-8 mb-2 bg-[#EFF3F4] p-6 rounded-xl">
+                    <!-- Judul -->
+                    <div class="text-left mb-6">
+                        <h2 class="text-lg font-semibold">Daftar Perjalanan</h2>
+                    </div>
 
-    <tbody>
-        <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
-            <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                    1
+                    <!-- Data Hubungan -->
+                    <div class="mt-6">
+                        <div class="overflow-x-auto mt-1 rounded-xl">
+                            <table
+                                class="w-full min-w-max rounded-xl text-md font-semibold bg-white text-left rtl:text-right text-gray-500">
+                                <thead class="text-md text-gray-700">
+                                    <tr class=" border-b text-center">
+                                        <th scope="col" class="px-6 py-3">
+                                            No
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Jenis dan kode perjalanan
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Tanggal daftar
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Perkiraan keberangkatan
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Perkiraan kepulangan
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Aksi
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr data-open-part class="bg-white hover:bg-gray-50 text-black text-center">
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                1
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            Haji (3911205)
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                12-05-2023
+                                            </div>
+                                        </td>
+                                        <td class="px-10 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                12-05-2023
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <div class="flex justify-center items-center">
+                                                12-05-2023
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            <a href="/viewdatajutrip"
+                                                class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
+                                                Lihat data
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </td>
-            <td class="px-6 py-4 text-center">
-            Haji (3911205)
-            </td>
-            <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                12-05-2023
-                </div>
-            </td>
-            <td class="px-10 py-4 text-center">
-                <div class="flex justify-center items-center">
-                12-05-2023
-                </div>
-            </td>
-            <td class="px-6 py-4 text-center">
-                <div class="flex justify-center items-center">
-                12-05-2023
-                </div>
-            </td>
-            <td class="px-6 py-4 text-center">
-                <a href="/viewdatajutrip" class="flex justify-center items-center gap-2 bg-blue-200 text-blue-500 py-2 px-4 rounded-md w-fit mx-auto">
-                Lihat data
-                </a>
-            </td>
-        </tr>
-    </tbody>
-        </table>
-                </div>
-            </div>
-        </div>
 
                 <div class="relative mx-2 mt-8 px-10 py-8 mb-8 bg-[#EFF3F4] p-6 rounded-xl">
                     <!-- Judul -->
@@ -225,12 +228,12 @@
                             <!-- No. Paspor -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">Username</label>
                             <textarea name="no_paspor" required placeholder="Username" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->username}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->username }}</textarea>
 
                             <!-- Issuing office -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Kata sandi</label>
                             <textarea name="issuing_office" required placeholder="Kata sandi" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">#{{$jamaahumrah->password}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">#{{ $jamaahumrah->password }}</textarea>
                         </div>
 
                         <!-- Kolom Kanan -->
@@ -238,12 +241,12 @@
                             <!-- No. Paspor -->
                             <label class="block text-sm mb-2 font-medium text-gray-700">No. Telepon</label>
                             <textarea name="no_paspor" required placeholder="No. Telepon" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->no_telepon}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->no_telepon }}</textarea>
 
                             <!-- Issuing office -->
                             <label class="block text-sm mb-2 font-medium text-gray-700 mt-4">Email</label>
                             <textarea name="issuing_office" required placeholder="Email@gmail.com" readonly
-                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{$jamaahumrah->email}}</textarea>
+                                class="w-full h-[50px] bg-white text-sm px-2 py-1 border rounded-md mt-1 resize-none">{{ $jamaahumrah->email }}</textarea>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ use App\Models\Transaksi;
 use App\Models\WisataLuarNegeri;
 use App\Models\WisataDomestik;
 use App\Models\jamaahumrah;
+use App\Models\jamaahhaji;
 
 use App\Http\Controllers\TransaksiController;
 
@@ -202,7 +203,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('/dashboard/datajh', function () {
-        return view('datajh');
+        $haji = JamaahHaji::all();
+        return view('datajh', compact('haji'));
     });
 
 
@@ -297,8 +299,12 @@ Route::middleware(['auth'])->group(function () {
 
 
     //JamaahHaji
-    Route::post('/jamaah-haji/store', [WisataLuarNegeriController::class, 'store'])->name('haji.store');
-
+    Route::post('/jamaah-haji/store', [JamaahHajiController::class, 'store'])->name('haji.store');
+    Route::get('/jamaahhaji', [JamaahHajiController::class, 'index'])->name('haji.index');
+    Route::get('/jamaah-haji/create', [JamaahHajiController::class, 'create'])->name('jamaah_haji.create');
+    Route::get('/viewdataju/{id}', [JamaahHajiController::class, 'show'])->name('datahaji.view');
+    Route::get('/datajh/{id}/edit', [JamaahHajiController::class, 'edit'])->name('jamaahhaji.edit');
+    Route::put('/ubahdatajh/update/{id}', [JamaahHajiController::class, 'update'])->name('jamaahhaji.update');
 
 
 

@@ -14,6 +14,8 @@ class JamaahHaji extends Model
     protected $fillable = [
         'nama_peserta', 'nik', 'tempat_lahir', 'tanggal_lahir',
         'jenis_kelamin', 'foto_peserta', 'no_paspor', 'issuing_office',
-        'date_of_issued', 'date_of_expiry', 'jenis_hubungan'
+        'date_of_issued', 'date_of_expiry', 'jenis_hubungan', 'foto_ktp','jenis_perjalanan', 'date_of_issued_perjalanan',
+        'biaya', 'date_of_expiry_perjalanan', 'hotel', 'transportasi',
+        'kode_khusus_perjalanan', 'catatan', 'foto_catatan', 'username', 'email', 'password', 'no_telepon'
     ];
 }
