@@ -309,21 +309,9 @@ Route::middleware(['auth'])->group(function () {
 
 
     //transaksi
-    Route::get('/transaction', function () {
-        return redirect()->route('transaction', 'datawl');
-    });
-
     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
     Route::get('/transaksi/create', [TransaksiController::class, 'create'])->name('transaksi.create');
     Route::post('/transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
-
-    Route::get('/transaction/{type}', function ($type) {
-        return view('transaction', compact('type'));
-    })->name('transaction');
-
-    Route::get('/transaction/{type}/tambahdata', function ($type) {
-        return view('add-data', compact('type'));
-    })->name('transaction.add-data');
 
     Route::get('/ubahdata', function () {
         return view('change-data');
