@@ -15,12 +15,12 @@
             aman, dan terpercaya.
         </p>
 
-        <div class="relative w-full h-52 mt-1 overflow-hidden">
+        <div class="relative block w-full lg:block hidden h-52 mt-1 overflow-hidden">
             <div class="wrapper">
                 <img src="images/komen.png" alt="Komentar" class="komentar">
             </div>
         </div>
-        <div class="relative w-full h-16 overflow-hidden">
+        <div class="relative block w-full lg:block hidden h-16 overflow-hidden">
             <div class="wrapper2">
                 <img src="images/komen2.png" alt="Komentar" class="komentar2">
                 <div class="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>

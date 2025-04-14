@@ -57,11 +57,8 @@
 @else
     <a href="/login" class="text-black bg-white border border-black hover:bg-gray-50 font-medium rounded-md text-sm px-6 py-2 text-center">Masuk</a>
 @endauth
-
-
-
       <!-- Tombol Menu Mobile -->
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+      <button onclick="toggleMobileMenu()" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -70,20 +67,30 @@
     </div>
 
   </div>
+  <!-- Dropdown Navbar khusus Mobile -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-2">
+  <ul class="space-y-2 text-sm font-medium text-gray-700">
+    <li>
+      <x-navbarlink-wlcm href="/" :active="request()->is('/*')">Beranda</x-navbarlink-wlcm>
+    </li>
+        <li>        
+          <x-navbarlink-wlcm href="/tentang" :active="request()->is('tentang*')">Tentang</x-navbarlink-wlcm>
+        </li>
+        <li>        
+          <x-navbarlink-wlcm href="/portofolio" :active="request()->is('portofolio*')">Portofolio</x-navbarlink-wlcm>
+        </li>
+        <li>        
+          <a href="https://www.instagram.com/elkhadijah.official?igsh=d3Q1eHh6dno0OHBv" class="text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 block py-2 px-3 md:p-0" target="_blank">Hubungi</a>
+        </li>
+          @auth
+          <li><a href="/dashboard" class="lg:block hidden text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 block py-2 px-3 md:p-0">Dashboard</a></li>
+          @endauth
+        </ul>
+</div>
 </nav>
 <script>
-    function toggleDropdown() {
-        const menu = document.getElementById('dropdownMenu');
-        menu.classList.toggle('hidden');
-    }
-
-    // Optional: Tutup dropdown saat klik di luar
-    window.addEventListener('click', function (e) {
-        const button = document.getElementById('dropdownButton');
-        const menu = document.getElementById('dropdownMenu');
-
-        if (!button.contains(e.target) && !menu.contains(e.target)) {
-            menu.classList.add('hidden');
-        }
-    });
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
 </script>
