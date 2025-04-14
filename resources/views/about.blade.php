@@ -3,16 +3,16 @@
 @section('title', 'Tentang - Elkhadijah')
 
 @section('content')
-<section class="mt-20 w-full flex flex-col items-center justify-center">
+<section class="mt-24 lg:mt-20 w-full mx-6 lg:mx-0 flex flex-col items-center justify-center">
     <div class="border-2 border-gray-400 rounded-full py-2 px-5 text-center">
         <h1 class="text-md text-gray-800">Elkhadijah Mecca Medina</h1>
     </div>
 
-    <div class="flex justify-between items-start w-full px-8 mt-10">
-        <p class="text-4xl text-[#27A1FF] font-semibold mr-6 max-w-[20%] text-left">
+    <div class="flex flex-col lg:flex-row justify-between items-start w-full px-8 mt-10">
+        <p class="text-3xl lg:text-4xl mb-6 text-[#27A1FF] font-semibold mb-6 mr-6 max-w-[20%] text-left">
             Tentang
         </p>
-        <div class="text-md text-black max-w-[80%] text-left space-y-6">
+        <div class="text-md text-black lg:max-w-[80%] max-w-[100%] text-justify lg:text-left space-y-6">
             <p>
                 PT Elkhadijah Mecca Medina memulai perjalanannya sejak tahun 2014, dengan berkolaborasi bersama salah satu travel terbesar di Indonesia. Dalam perjalanannya, kami telah mendampingi keberangkatan jamaah dari berbagai daerah, baik di Pulau Jawa maupun luar Pulau Jawa.
             </p>
@@ -28,28 +28,28 @@
         </div>
     </div>
 
-    <div class="flex justify-between items-center w-full px-8 mt-14">
-        <p class="text-4xl text-[#27A1FF] font-semibold mr-6 max-w-[20%] text-left">
+    <div class="flex flex-col lg:flex-row justify-between lg:items-center w-full px-8 mt-14">
+        <p class="text-3xl lg:text-4xl mb-6 text-[#27A1FF] font-semibold mr-6 max-w-[20%] text-left">
             Visi
         </p>
-        <div class="text-md text-black max-w-[80%] text-left bg-[#27A1FF] bg-opacity-[7%] p-6 rounded-lg">    
+        <div class="text-md text-black lg:max-w-[80%] max-w-[100%] text-justify lg:text-left bg-[#27A1FF] bg-opacity-[7%] p-6 rounded-lg">    
             <p>
             Menjadi penyelenggara Umrah, Haji dan Wisata Halal yang Terbaik dan Terbesar di Jawa Tengah dengan pelayanan yang Amanah dan Berkualitas.  
             </p>
         </div>
     </div>
 
-    <div class="flex justify-between items-start w-full px-8 mt-10">
-        <p class="text-4xl text-[#27A1FF] font-semibold mr-6 max-w-[20%] text-left">
+    <div class="flex flex-col lg:flex-row justify-between items-start w-full px-8 mt-10">
+        <p class="text-3xl lg:text-4xl mb-6 text-[#27A1FF] font-semibold mr-6 max-w-[20%] text-left">
             Misi
         </p>
-        <div class="space-y-5 max-w-[80%] bg-[#27A1FF] bg-opacity-[7%]  p-6 rounded-lg">
+        <div class="space-y-5 lg:max-w-[80%] max-w-[100%] bg-[#27A1FF] bg-opacity-[7%]  p-6 rounded-lg">
         <!-- Item 1 -->
             <div class="flex items-center gap-4 text-md text-black">    
                 <div class="w-16 h-16 flex items-center justify-center text-2xl font-bold text-[#27A1FF] bg-[#27A1FF] bg-opacity-[15%] rounded-xl">
                     <p>01</p>
                 </div>    
-                <p class="flex-1 px-2">
+                <p class="flex-1 px-2 text-justify lg:text-left">
                     Menjadi penyelenggara Umrah, Haji dan Wisata Halal yang Terbaik dan Terbesar di Jawa Tengah dengan pelayanan yang Amanah dan Berkualitas.
                 </p>
             </div>
@@ -59,7 +59,7 @@
                 <div class="w-16 h-16 flex items-center justify-center text-2xl font-bold text-[#27A1FF] bg-[#27A1FF] bg-opacity-[15%] rounded-xl">
                     <p>02</p>
                 </div>    
-                <p class="flex-1 px-2">
+                <p class="flex-1 px-2 text-justify lg:text-left">
                 Memberikan kemudahan bagi pelanggan atau jamaah baik dalam penyelenggaraan perjalanan ibadah Umrah, Haji dan Wisata Halal maupun dalam bentuk pelayanan lainnya.                  </p>
             </div>
 
@@ -68,7 +68,7 @@
                 <div class="w-16 h-16 flex items-center justify-center text-2xl font-bold text-[#27A1FF] bg-[#27A1FF] bg-opacity-[15%] rounded-xl">
                     <p>03</p>
                 </div>    
-                <p class="flex-1 px-2">
+                <p class="flex-1 px-2 text-justify lg:text-left">
                 Memberikan alternatif dan solusi terbaik terutama dalam pelayanan perjalanan ibadah umroh dan haji sesuai dengan standar pelayanan Elkhadijah.                  </p>
             </div>
 
@@ -77,7 +77,7 @@
                 <div class="w-16 h-16 flex items-center justify-center text-2xl font-bold text-[#27A1FF] bg-[#27A1FF] bg-opacity-[15%] rounded-xl">
                     <p>04</p>
                 </div>    
-                <p class="flex-1 px-2">
+                <p class="flex-1 px-2 text-justify lg:text-left">
                 Menciptakan pengalaman perjalanan ibadah yang nyaman, aman, dan berkesan dengan pelayanan yang ramah dan profesional, fokus pada kepuasan jamaah.
             </div>
         </div>
