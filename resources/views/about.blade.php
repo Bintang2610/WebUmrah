@@ -83,9 +83,9 @@
         </div>
     </div>
 
-    <p class="mt-14 text-4xl text-[#27A1FF] font-semibold text-center">Legalitas Perusahaan</p>
+    <p class="mt-14 text-3xl lg:text-4xl text-[#27A1FF] font-semibold text-center">Legalitas Perusahaan</p>
 
-<div class="flex justify-between items-start w-full px-8 mt-12">
+<div class="flex flex-col lg:flex-row justify-between items-start w-full px-8 mt-12">
     <p class="text-md text-black mr-6 max-w-[20%] text-left">
         KEMENKUMHAM
     </p>
